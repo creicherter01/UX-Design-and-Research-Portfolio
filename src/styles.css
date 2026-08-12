@@ -142,3 +142,117 @@
     color: var(--color-foreground);
   }
 }
+
+/* ---------------------------------------------------------------
+   Courtney Reicherter — personal brand system
+   Sage & cream canvas, deep forest ink, clay accent.
+   --------------------------------------------------------------- */
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-clay: var(--clay);
+  --color-ink: var(--ink);
+}
+
+:root {
+  --radius: 0.25rem;
+  --cream: oklch(0.963 0.015 87);
+  --sage: oklch(0.855 0.032 143);
+  --sage-deep: oklch(0.66 0.055 145);
+  --clay: oklch(0.578 0.116 40);
+  --ink: oklch(0.253 0.024 152);
+
+  --background: oklch(0.963 0.015 87);
+  --foreground: oklch(0.253 0.024 152);
+  --card: oklch(0.982 0.011 88);
+  --card-foreground: oklch(0.253 0.024 152);
+  --popover: oklch(0.982 0.011 88);
+  --popover-foreground: oklch(0.253 0.024 152);
+  --primary: oklch(0.415 0.049 149);
+  --primary-foreground: oklch(0.976 0.013 88);
+  --secondary: oklch(0.925 0.024 130);
+  --secondary-foreground: oklch(0.3 0.03 150);
+  --muted: oklch(0.928 0.019 95);
+  --muted-foreground: oklch(0.49 0.022 150);
+  --accent: oklch(0.855 0.032 143);
+  --accent-foreground: oklch(0.253 0.024 152);
+  --destructive: oklch(0.578 0.116 40);
+  --destructive-foreground: oklch(0.976 0.013 88);
+  --border: oklch(0.876 0.022 118);
+  --input: oklch(0.876 0.022 118);
+  --ring: oklch(0.66 0.055 145);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--sage);
+    color: var(--ink);
+  }
+}
+
+@utility label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@utility paper-grain {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    background-image: radial-gradient(
+      color-mix(in oklab, var(--ink) 12%, transparent) 0.5px,
+      transparent 0.5px
+    );
+    background-size: 4px 4px;
+  }
+}
+
+@utility link-underline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+  animation: marquee-x 28s linear infinite;
+}
