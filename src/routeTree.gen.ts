@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as WorkDawsonMotorsRouteImport } from './routes/work.dawson-motors'
+import { Route as WorkFlightBookingRouteImport } from './routes/work.flight-booking'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const WorkDawsonMotorsRoute = WorkDawsonMotorsRouteImport.update({
   path: '/work/dawson-motors',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkFlightBookingRoute = WorkFlightBookingRouteImport.update({
+  id: '/work/flight-booking',
+  path: '/work/flight-booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/work/dawson-motors': typeof WorkDawsonMotorsRoute
+  '/work/flight-booking': typeof WorkFlightBookingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/work/dawson-motors': typeof WorkDawsonMotorsRoute
+  '/work/flight-booking': typeof WorkFlightBookingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,22 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/work/dawson-motors': typeof WorkDawsonMotorsRoute
+  '/work/flight-booking': typeof WorkFlightBookingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/work/dawson-motors'
+  fullPaths:
+    '/' | '/about' | '/contact' | '/work/dawson-motors' | '/work/flight-booking'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/work/dawson-motors'
-  id: '__root__' | '/' | '/about' | '/contact' | '/work/dawson-motors'
+  to:
+    '/' | '/about' | '/contact' | '/work/dawson-motors' | '/work/flight-booking'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/work/dawson-motors'
+    | '/work/flight-booking'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +84,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   WorkDawsonMotorsRoute: typeof WorkDawsonMotorsRoute
+  WorkFlightBookingRoute: typeof WorkFlightBookingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +117,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkDawsonMotorsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/flight-booking': {
+      id: '/work/flight-booking'
+      path: '/work/flight-booking'
+      fullPath: '/work/flight-booking'
+      preLoaderRoute: typeof WorkFlightBookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +132,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   WorkDawsonMotorsRoute: WorkDawsonMotorsRoute,
+  WorkFlightBookingRoute: WorkFlightBookingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
