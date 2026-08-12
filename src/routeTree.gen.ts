@@ -10,33 +10,81 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as WorkDawsonMotorsRouteImport } from './routes/work.dawson-motors'
+import { Route as WorkFlightBookingRouteImport } from './routes/work.flight-booking'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkDawsonMotorsRoute = WorkDawsonMotorsRouteImport.update({
+  id: '/work/dawson-motors',
+  path: '/work/dawson-motors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkFlightBookingRoute = WorkFlightBookingRouteImport.update({
+  id: '/work/flight-booking',
+  path: '/work/flight-booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/work/dawson-motors': typeof WorkDawsonMotorsRoute
+  '/work/flight-booking': typeof WorkFlightBookingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/work/dawson-motors': typeof WorkDawsonMotorsRoute
+  '/work/flight-booking': typeof WorkFlightBookingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/work/dawson-motors': typeof WorkDawsonMotorsRoute
+  '/work/flight-booking': typeof WorkFlightBookingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    '/' | '/about' | '/contact' | '/work/dawson-motors' | '/work/flight-booking'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    '/' | '/about' | '/contact' | '/work/dawson-motors' | '/work/flight-booking'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/work/dawson-motors'
+    | '/work/flight-booking'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  WorkDawsonMotorsRoute: typeof WorkDawsonMotorsRoute
+  WorkFlightBookingRoute: typeof WorkFlightBookingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +96,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/dawson-motors': {
+      id: '/work/dawson-motors'
+      path: '/work/dawson-motors'
+      fullPath: '/work/dawson-motors'
+      preLoaderRoute: typeof WorkDawsonMotorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/flight-booking': {
+      id: '/work/flight-booking'
+      path: '/work/flight-booking'
+      fullPath: '/work/flight-booking'
+      preLoaderRoute: typeof WorkFlightBookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  WorkDawsonMotorsRoute: WorkDawsonMotorsRoute,
+  WorkFlightBookingRoute: WorkFlightBookingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
