@@ -8,6 +8,7 @@ import {
   Section,
 } from "@/components/case-study-bits";
 import { Reveal } from "@/components/reveal";
+import flightCover from "@/assets/flight-booking-cover.jpg";
 
 export const Route = createFileRoute("/work/flight-booking")({
   head: () => ({
@@ -153,6 +154,24 @@ function FlightCase() {
         ]}
         prototype="https://www.figma.com/make/79Uu2mYP7IxKzg7dlV6Bvx/High-Fidelity-Prototype--Copy-?fullscreen=1&t=q1JTf45eAVydBSLe-1"
       />
+
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-5 py-12 sm:px-8">
+          <Reveal className="overflow-hidden rounded-lg border border-border bg-secondary/40">
+            <img
+              src={flightCover}
+              alt="High-fidelity flight results and seat selection screens from the prototype"
+              width={1232}
+              height={912}
+              loading="lazy"
+              className="w-full"
+            />
+          </Reveal>
+          <p className="label-mono mt-3 text-muted-foreground">
+            High-fidelity flow — results card, inline seat map and plain-language inclusions.
+          </p>
+        </div>
+      </section>
 
       <Section
         eyebrow="The challenge"

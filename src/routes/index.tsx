@@ -5,7 +5,7 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Reveal, RevealWords } from "@/components/reveal";
 import { EMAIL, LINKEDIN } from "@/components/site-chrome";
 import dawsonAfter from "@/assets/Screenshot_2026-07-09_102408.png.asset.json";
-import dawsonContact from "@/assets/Screenshot_2026-07-20_194739.png.asset.json";
+import flightCover from "@/assets/flight-booking-cover.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,7 +67,7 @@ const PROJECTS = [
       "Reimagining a fragmented flight booking experience as one unified interface that searches hundreds of airlines at once.",
     tags: ["UX Research", "Interaction Design", "Prototyping"],
     kind: "UX capstone project",
-    image: dawsonContact.url,
+    image: flightCover,
   },
 ];
 
