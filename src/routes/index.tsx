@@ -200,7 +200,7 @@ function Hero() {
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm transition-colors hover:border-clay hover:text-clay"
+              className="inline-flex items-center gap-2 rounded-full border border-foreground/25 px-6 py-3 text-sm transition-colors hover:border-foreground/50 hover:text-clay"
             >
               Get in touch
             </Link>
