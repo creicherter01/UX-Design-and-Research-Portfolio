@@ -378,7 +378,7 @@ function Home() {
           <Reveal>
             <p className="label-mono text-clay">Selected work</p>
             <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight tracking-tight sm:text-5xl">
-              Two end-to-end case studies
+              Two projects, start to finish
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
               One real client, one capstone — both carried from research and audit through to
