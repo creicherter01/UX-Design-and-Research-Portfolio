@@ -110,6 +110,82 @@ function ContactPage() {
         </div>
       </section>
 
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-20">
+          <Reveal>
+            <p className="label-mono text-clay">Send a message</p>
+            <h2 className="mt-3 font-display text-3xl tracking-tight sm:text-4xl">
+              Tell me what you're working on
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              Fill this in and it lands straight in my inbox at {EMAIL}.
+            </p>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <form
+              onSubmit={onSubmit}
+              className="mt-8 grid gap-5 rounded-lg border border-border bg-card p-7 sm:grid-cols-2"
+            >
+              <label className="grid gap-2">
+                <span className="label-mono text-muted-foreground">Your name</span>
+                <input
+                  required
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  className="rounded-md border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-clay"
+                  placeholder="Jane Doe"
+                />
+              </label>
+              <label className="grid gap-2">
+                <span className="label-mono text-muted-foreground">Your email</span>
+                <input
+                  required
+                  type="email"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                  className="rounded-md border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-clay"
+                  placeholder="you@company.com"
+                />
+              </label>
+              <label className="grid gap-2 sm:col-span-2">
+                <span className="label-mono text-muted-foreground">Subject</span>
+                <input
+                  required
+                  value={form.subject}
+                  onChange={(e) => setForm({ ...form, subject: e.target.value })}
+                  className="rounded-md border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-clay"
+                  placeholder="UX role · project · portfolio review"
+                />
+              </label>
+              <label className="grid gap-2 sm:col-span-2">
+                <span className="label-mono text-muted-foreground">Message</span>
+                <textarea
+                  required
+                  rows={5}
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  className="resize-y rounded-md border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-clay"
+                  placeholder="A few lines about the role, project or question."
+                />
+              </label>
+              <div className="flex flex-wrap items-center gap-4 sm:col-span-2">
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform hover:-translate-y-0.5"
+                >
+                  Send message <ArrowUpRight className="h-4 w-4" />
+                </button>
+                {sent && (
+                  <p className="label-mono text-sage-deep">
+                    Your email client is opening with the message ready to send.
+                  </p>
+                )}
+              </div>
+            </form>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="border-b border-border bg-secondary/30">
         <div className="mx-auto grid max-w-5xl gap-8 px-5 py-16 sm:grid-cols-3 sm:px-8">
           <Reveal>
