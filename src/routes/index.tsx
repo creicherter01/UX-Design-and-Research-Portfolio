@@ -227,7 +227,16 @@ function Hero() {
                 Off the clock: a book, a half-finished puzzle, and something in the oven.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {["Reading", "Puzzles", "Running", "Baking", "Dog person"].map((t) => (
+                {[
+                  "User research",
+                  "Reading",
+                  "Usability testing",
+                  "Puzzles",
+                  "Prototyping",
+                  "Running",
+                  "Psychology-led",
+                  "Baking",
+                ].map((t) => (
                   <span
                     key={t}
                     className="label-mono rounded-full bg-secondary px-3 py-1 text-secondary-foreground"
