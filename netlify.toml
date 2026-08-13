@@ -1,0 +1,7 @@
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+[build.environment]
+  NETLIFY = "true"
+  NITRO_PRESET = "netlify"
