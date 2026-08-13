@@ -228,6 +228,52 @@ function AboutPage() {
       </section>
 
       <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-20">
+          <Reveal>
+            <p className="label-mono text-clay">Off the clock</p>
+            <h2 className="mt-3 font-display text-3xl tracking-tight sm:text-4xl">
+              The things that keep me curious
+            </h2>
+          </Reveal>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                k: "Always mid-book",
+                v: "Usually two at once — one fiction, one about how people think. It's where a lot of my research instincts come from.",
+              },
+              {
+                k: "Puzzles on the table",
+                v: "1,000 pieces, no picture-peeking. Same satisfaction as watching messy interview notes finally cluster into themes.",
+              },
+              {
+                k: "Running most mornings",
+                v: "My thinking time. Half my best ideas about a stuck screen show up somewhere around mile three.",
+              },
+              {
+                k: "Baking for people",
+                v: "I test recipes the way I test prototypes: change one variable, ask someone honest, adjust.",
+              },
+              {
+                k: "Exploring new towns",
+                v: "Weekend drives with no plan. I notice signage, menus and parking apps far more than I should.",
+              },
+              {
+                k: "Family and animals",
+                v: "Very close to my family, and a soft spot for every animal I meet — the pets get greeted before the people.",
+              },
+            ].map((item, i) => (
+              <Reveal key={item.k} delay={i * 0.05}>
+                <div className="h-full rounded-lg border border-border bg-card p-6">
+                  <h3 className="font-display text-lg">{item.k}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.v}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-6 px-5 py-16 sm:px-8">
           <p className="font-display text-2xl sm:text-3xl">
             Curious how I work? Start with a case study.
