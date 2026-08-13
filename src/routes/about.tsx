@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, RevealWords } from "@/components/reveal";
 import { EMAIL, LINKEDIN } from "@/components/site-chrome";
+import portrait from "@/assets/courtney-portrait.png.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
