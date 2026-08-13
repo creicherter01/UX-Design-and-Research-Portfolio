@@ -247,20 +247,20 @@ function Hero() {
 
 const EDGE = [
   {
-    k: "Psychology, not guesswork",
-    v: "A B.A. in Psychology means I arrive with research methodology and cognitive-load thinking already built in — not learned from a blog post.",
+    k: "I start with people, not pixels",
+    v: "Psychology taught me how to ask better questions: what mental model someone brings, where they get stuck, and what would make the next step obvious.",
   },
   {
-    k: "Three years reading real users",
-    v: "Front-of-house team lead at a luxury mansion hotel: spotting friction in someone's experience and fixing it in real time, every shift.",
+    k: "Three years watching real users struggle",
+    v: "As a front-of-house team lead at a luxury hotel, my job was to notice friction and fix it on the spot — the same reflex I use in research and design.",
   },
   {
-    k: "Comfortable with the numbers",
-    v: "A payroll data analyst internship taught me to sit with messy data until it says something true — the same muscle usability synthesis needs.",
+    k: "I like messy data",
+    v: "A payroll analyst internship taught me to sit with spreadsheets until they tell the truth. Usability synthesis uses the same patience.",
   },
   {
-    k: "Client-tested, not classroom-only",
-    v: "I ran a real freelance engagement solo: outreach, discovery, audit, redesign, revisions and launch — including the client's privacy constraints.",
+    k: "I've worked with a real client",
+    v: "Dawson Motors wasn't a classroom brief. I handled outreach, discovery, audit, redesign, revisions and launch — including what the owner did and didn't want public.",
   },
 ];
 
