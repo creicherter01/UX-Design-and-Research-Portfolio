@@ -90,12 +90,13 @@ function AboutPage() {
               <RevealWords text="Designing for how people think, decide and behave." />
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              I'm Courtney — a UX designer and researcher with a psychology background. I specialise
-              in simplifying complex workflows and building interfaces that feel obvious in
-              hindsight: grounded in research, shaped by iteration, made to be inclusive.
+              I'm Courtney — a UX designer and researcher with a psychology degree and a habit of
+              asking too many questions. I like the kind of design that feels obvious once it's
+              done: the path forward is clear, the hard stuff has been handled, and nothing is
+              there by accident.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              {["Empathy at the root", "Every pixel intentional", "Designed for everyone"].map(
+              {["Research before assumptions", "Details matter", "Design for real people"].map(
                 (t) => (
                   <span
                     key={t}
