@@ -74,68 +74,93 @@ const PROJECTS = [
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
-  const fade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 160]);
+  const fade = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
+
+  const mx = useMotionValue(50);
+  const my = useMotionValue(40);
+  const spotlight = useMotionTemplate`radial-gradient(38rem 38rem at ${mx}% ${my}%, oklch(0.78 0.09 140 / 0.5), transparent 70%)`;
 
   return (
-    <section ref={ref} className="paper-grain relative overflow-hidden border-b border-border">
+    <section
+      ref={ref}
+      onPointerMove={(e) => {
+        const r = e.currentTarget.getBoundingClientRect();
+        mx.set(((e.clientX - r.left) / r.width) * 100);
+        my.set(((e.clientY - r.top) / r.height) * 100);
+      }}
+      className="paper-grain relative overflow-hidden border-b border-border"
+    >
+      {/* curtain wipe on load */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -right-32 -top-32 h-[34rem] w-[34rem] rounded-full bg-sage/50 blur-3xl"
-        animate={{ scale: [1, 1.12, 1], x: [0, -30, 0], y: [0, 24, 0] }}
-        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-40 -left-24 h-[26rem] w-[26rem] rounded-full bg-clay/15 blur-3xl"
-        animate={{ scale: [1, 1.18, 1], x: [0, 40, 0] }}
-        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute inset-0 z-20 origin-top bg-primary"
+        initial={{ scaleY: 1 }}
+        animate={{ scaleY: 0 }}
+        transition={{ duration: 1.1, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
       />
 
       <motion.div
-        style={{ y, opacity: fade }}
-        className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-36"
+        aria-hidden
+        style={{ background: spotlight }}
+        className="pointer-events-none absolute inset-0 blur-2xl"
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-40 -left-24 h-[26rem] w-[26rem] rounded-full bg-clay/20 blur-3xl"
+        animate={{ scale: [1, 1.2, 1], x: [0, 50, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        style={{ y, opacity: fade, scale }}
+        className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32"
       >
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 1 }}
           className="label-mono flex items-center gap-2 text-muted-foreground"
         >
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-clay opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-clay" />
           </span>
-          Open to UX roles · 2026
+          Psychology grad · UX designer · Open to roles, 2026
         </motion.p>
 
-        <h1 className="mt-8 max-w-4xl font-display text-5xl leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
-          <RevealWords text="Designing with" />
-          <br />
-          <span className="text-clay">
-            <RevealWords text="empathy, intention" delay={0.25} />
+        <h1 className="mt-8 max-w-5xl font-display text-[3.1rem] leading-[0.9] tracking-[-0.03em] sm:text-8xl lg:text-[8.5rem]">
+          <span className="block">
+            <RevealChars text="Read the room." delay={0.9} />
           </span>
-          <br />
-          <RevealWords text="&amp; craft." delay={0.5} />
+          <span className="block text-sage-deep">
+            <RevealChars text="Read the data." delay={1.25} />
+          </span>
+          <span className="block italic text-clay">
+            <RevealChars text="Then design." delay={1.6} />
+          </span>
         </h1>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-10 grid gap-8 sm:grid-cols-[1.1fr_1fr] sm:items-end"
+          transition={{ duration: 0.9, delay: 2 }}
+          className="mt-12 grid gap-8 sm:grid-cols-[1.1fr_1fr] sm:items-end"
         >
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-            I'm <span className="text-foreground">Courtney Reicherter</span>, a UX designer and
-            researcher with a psychology degree. I turn complex, frustrating digital experiences
-            into something people actually enjoy — grounded in research, refined through iteration.
+            I'm <span className="text-foreground">Courtney Reicherter</span> — a UX designer with a
+            psychology degree, three years reading real people on a luxury hospitality floor, and a
+            data-analyst's appetite for evidence. Most portfolios show you screens. Mine shows you
+            <span className="text-foreground"> why every screen looks the way it does.</span>
           </p>
           <div className="flex flex-wrap gap-3 sm:justify-end">
             <a
               href="#work"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
             >
-              See my work <ArrowDown className="h-4 w-4" />
+              See the case studies
+              <ArrowDown className="h-4 w-4 transition-transform duration-500 group-hover:translate-y-1" />
             </a>
             <Link
               to="/contact"
@@ -160,6 +185,26 @@ function Hero() {
     </section>
   );
 }
+
+const EDGE = [
+  {
+    k: "Psychology, not guesswork",
+    v: "A B.A. in Psychology means I arrive with research methodology and cognitive-load thinking already built in — not learned from a blog post.",
+  },
+  {
+    k: "Three years reading real users",
+    v: "Front-of-house team lead at a luxury mansion hotel: spotting friction in someone's experience and fixing it in real time, every shift.",
+  },
+  {
+    k: "Comfortable with the numbers",
+    v: "A payroll data analyst internship taught me to sit with messy data until it says something true — the same muscle usability synthesis needs.",
+  },
+  {
+    k: "Client-tested, not classroom-only",
+    v: "I ran a real freelance engagement solo: outreach, discovery, audit, redesign, revisions and launch — including the client's privacy constraints.",
+  },
+];
+
 
 function Marquee() {
   return (
