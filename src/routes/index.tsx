@@ -22,13 +22,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Psychology-led UX design portfolio: two end-to-end case studies covering research, interaction design and high-fidelity prototyping — flight booking and a family auto shop redesign.",
+          "Psychology-led UX design portfolio: two full case studies covering research, interaction design and high-fidelity prototyping — flight booking and a family auto shop redesign.",
       },
       { property: "og:title", content: "Courtney Reicherter — UX Designer & Researcher" },
       {
         property: "og:description",
         content:
-          "Psychology-led UX portfolio with two end-to-end case studies: research, interaction design and high-fidelity prototypes.",
+          "Psychology-led UX portfolio with two full case studies: research, interaction design and high-fidelity prototypes.",
       },
       { property: "og:image", content: dawsonAfter.url },
       { name: "twitter:image", content: dawsonAfter.url },
@@ -50,7 +50,7 @@ const MARQUEE = [
 ];
 
 const STATS = [
-  { value: "2", label: "End-to-end case studies" },
+  { value: "2", label: "Full case studies" },
   { value: "12+", label: "Users interviewed per project" },
   { value: "B.A.", label: "Psychology, Binghamton" },
   { value: "Hi-Fi", label: "Research through to pixels" },
@@ -247,20 +247,20 @@ function Hero() {
 
 const EDGE = [
   {
-    k: "Psychology, not guesswork",
-    v: "A B.A. in Psychology means I arrive with research methodology and cognitive-load thinking already built in — not learned from a blog post.",
+    k: "I start with people, not pixels",
+    v: "Psychology taught me how to ask better questions: what mental model someone brings, where they get stuck, and what would make the next step obvious.",
   },
   {
-    k: "Three years reading real users",
-    v: "Front-of-house team lead at a luxury mansion hotel: spotting friction in someone's experience and fixing it in real time, every shift.",
+    k: "Three years watching real users struggle",
+    v: "As a front-of-house team lead at a luxury hotel, my job was to notice friction and fix it on the spot — the same reflex I use in research and design.",
   },
   {
-    k: "Comfortable with the numbers",
-    v: "A payroll data analyst internship taught me to sit with messy data until it says something true — the same muscle usability synthesis needs.",
+    k: "I like messy data",
+    v: "A payroll analyst internship taught me to sit with spreadsheets until they tell the truth. Usability synthesis uses the same patience.",
   },
   {
-    k: "Client-tested, not classroom-only",
-    v: "I ran a real freelance engagement solo: outreach, discovery, audit, redesign, revisions and launch — including the client's privacy constraints.",
+    k: "I've worked with a real client",
+    v: "Dawson Motors wasn't a classroom brief. I handled outreach, discovery, audit, redesign, revisions and launch — including what the owner did and didn't want public.",
   },
 ];
 
@@ -349,7 +349,7 @@ function Home() {
           <Reveal>
             <p className="label-mono text-clay">Why me</p>
             <h2 className="mt-3 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl">
-              Four things most junior UX candidates can't say.
+              A few things that shape how I work.
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
@@ -378,7 +378,7 @@ function Home() {
           <Reveal>
             <p className="label-mono text-clay">Selected work</p>
             <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight tracking-tight sm:text-5xl">
-              Two end-to-end case studies
+              Two projects, start to finish
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
               One real client, one capstone — both carried from research and audit through to
@@ -405,15 +405,15 @@ function Home() {
           </Reveal>
           <Reveal delay={0.1} className="space-y-6">
             <p className="text-base leading-relaxed text-muted-foreground">
-              A psychology background changes the questions I ask. Instead of “does this look
-              right?”, I'm asking what mental model someone brings, where cognitive load spikes, and
-              which single decision would remove the most friction.
+              My background changes the questions I ask. Instead of “does this look right?”, I want
+              to know what someone already expects, where they hesitate, and which single change
+              would make the next step feel obvious.
             </p>
             <div className="grid gap-3 sm:grid-cols-3">
               {[
-                { k: "Understand", v: "Interviews, desk research, heuristic audits" },
-                { k: "Frame", v: "Affinity maps, journeys, personas, priorities" },
-                { k: "Build & test", v: "Wireframes, hi-fi prototypes, usability rounds" },
+                { k: "Understand", v: "Talk to people, watch them work, audit what's already live" },
+                { k: "Frame", v: "Cluster notes, map the journey, decide what matters most" },
+                { k: "Build & test", v: "Prototype fast, put it in front of users, refine" },
               ].map((s) => (
                 <div key={s.k} className="rounded-lg border border-border bg-card p-5">
                   <p className="label-mono text-sage-deep">{s.k}</p>

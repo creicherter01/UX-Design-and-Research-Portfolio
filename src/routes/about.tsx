@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
       {
         property: "og:description",
         content:
-          "From a B.A. in Psychology to end-to-end UX case studies — research, interaction design, prototyping and testing.",
+          "From a B.A. in Psychology to full UX case studies — research, interaction design, prototyping and testing.",
       },
     ],
   }),
@@ -55,27 +55,27 @@ const JOURNEY = [
 const SKILLS = [
   {
     title: "UX Research",
-    body: "User interviews, usability testing, affinity mapping and desk research that grounds every decision in evidence.",
+    body: "User interviews, usability testing, affinity mapping and desk research — I want to know what's true before I start designing.",
   },
   {
     title: "Interaction Design",
-    body: "Flows, hierarchies and states built so the next step is obvious and there's less to figure out.",
+    body: "Building flows and states so the next step is clear and people don't have to think too hard about what to do next.",
   },
   {
     title: "Prototyping",
-    body: "From rough sketches to high-fidelity interactive prototypes that can be put in front of real people.",
+    body: "From quick sketches to clickable high-fidelity prototypes I can put in front of users and watch them use.",
   },
   {
     title: "User Testing",
-    body: "Moderated and unmoderated sessions that surface real pain points and validate assumptions.",
+    body: "Moderated sessions where I watch real people try tasks, then use what breaks to guide the next round of design.",
   },
   {
     title: "Design Systems",
-    body: "Consistent, scalable component libraries that keep products coherent across touchpoints.",
+    body: "Organising reusable components so a product stays consistent without reinventing the same button every time.",
   },
   {
     title: "Psychology-Led Design",
-    body: "Behavioural science, mental models and cognitive principles applied so experiences feel effortless.",
+    body: "Using what I learned about memory, attention and decision-making to reduce friction and make choices easier.",
   },
 ];
 
@@ -90,12 +90,13 @@ function AboutPage() {
               <RevealWords text="Designing for how people think, decide and behave." />
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              I'm Courtney — a UX designer and researcher with a psychology background. I specialise
-              in simplifying complex workflows and building interfaces that feel obvious in
-              hindsight: grounded in research, shaped by iteration, made to be inclusive.
+              I'm Courtney — a UX designer and researcher with a psychology degree and a habit of
+              asking too many questions. I like the kind of design that feels obvious once it's
+              done: the path forward is clear, the hard stuff has been handled, and nothing is
+              there by accident.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              {["Empathy at the root", "Every pixel intentional", "Designed for everyone"].map(
+              {["Research before assumptions", "Details matter", "Design for real people"].map(
                 (t) => (
                   <span
                     key={t}
@@ -125,22 +126,23 @@ function AboutPage() {
           <Reveal>
             <p className="label-mono text-clay">Philosophy</p>
             <blockquote className="mt-4 font-display text-3xl leading-tight tracking-tight">
-              “Great design isn't just beautiful — it's functional, inclusive and human-centred.”
+              “The best design is the one nobody notices — it just works.”
             </blockquote>
           </Reveal>
           <Reveal delay={0.1} className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              Having a psychology background helps me not only in research but in the design phase
-              too — it tailors my thought process around real user needs instead of assumptions.
+              Psychology taught me to start with what people actually do, not what they say they'll
+              do. That habit carries into every screen I design: I want to know where someone gets
+              stuck before I decide what the fix looks like.
             </p>
             <p>
-              What fascinates me most is how small, intentional decisions transform how people
-              interact with a product. A single button placement, a clearer label, a simplified flow
-              — that's often the difference between frustration and delight.
+              I'm most interested in the small decisions that quietly shape an experience — a
+              clearer label, a better order of steps, a button placed where someone already expects
+              it. Those details are usually what separate a frustrating flow from an easy one.
             </p>
             <p>
-              My approach combines rigorous research, systematic design thinking and iterative
-              refinement, so every interaction has a reason to exist.
+              I work in loops: research, sketch, test, refine. Nothing stays because it looks nice;
+              it stays because it held up when real people tried to use it.
             </p>
           </Reveal>
         </div>

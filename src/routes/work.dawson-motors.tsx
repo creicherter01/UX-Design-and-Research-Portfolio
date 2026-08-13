@@ -197,12 +197,12 @@ function DawsonCase() {
         <div className="mt-14">
           <p className="label-mono text-clay">Why it mattered</p>
           <h3 className="mt-3 font-display text-2xl leading-snug sm:text-3xl">
-            Published research on first impressions set the stakes
+            First impressions happen fast
           </h3>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            For a business whose entire advantage is four decades of local trust, the credibility gap
-            between the shop and its website was the real problem. These industry findings framed how
-            aggressively I prioritised above-the-fold trust and a single obvious next step.
+            For a business whose whole advantage is four decades of local trust, the gap between the
+            shop and its website was the real problem. These findings helped me fight for trust
+            signals and one obvious next step above everything else.
           </p>
           <div className="mt-8">
             <StatBand

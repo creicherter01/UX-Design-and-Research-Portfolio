@@ -53,12 +53,11 @@ function ContactPage() {
         <div className="mx-auto max-w-5xl px-5 py-20 sm:px-8 sm:py-28">
           <p className="label-mono text-clay">Contact</p>
           <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight sm:text-6xl">
-            <RevealWords text="Let's build something people actually enjoy." />
+            <RevealWords text="Say hello — I'd love to hear from you." />
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I'm currently open to UX design and research roles, and I'm always happy to talk
-            through a project, a problem or a portfolio review. The fastest way to reach me is
-            email.
+            I'm currently open to UX design and research roles, and I always reply. The fastest way
+            to reach me is email, but LinkedIn works too.
           </p>
         </div>
       </section>

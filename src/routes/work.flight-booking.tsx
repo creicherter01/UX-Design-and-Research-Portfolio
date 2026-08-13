@@ -21,7 +21,7 @@ export const Route = createFileRoute("/work/flight-booking")({
       {
         name: "description",
         content:
-          "An end-to-end UX capstone: 12+ user interviews, journey mapping and usability testing turned a fragmented flight booking experience into one connected flow.",
+          "A UX capstone from research to prototype: 12+ user interviews, journey mapping and usability testing turned a fragmented flight booking experience into one connected flow.",
       },
       {
         property: "og:title",
@@ -299,7 +299,7 @@ function FlightCase() {
       <Section
         eyebrow="The result"
         title="What the final prototype delivers"
-        lede="A high-fidelity, end-to-end booking flow — search, compare, seats, baggage, confirmation — designed around efficiency and clarity at every step."
+        lede="A high-fidelity booking flow — search, compare, seats, baggage, confirmation — designed around efficiency and clarity at every step."
         tone="muted"
       >
         <OutcomeList items={OUTCOMES} />
