@@ -55,27 +55,27 @@ const JOURNEY = [
 const SKILLS = [
   {
     title: "UX Research",
-    body: "User interviews, usability testing, affinity mapping and desk research that grounds every decision in evidence.",
+    body: "User interviews, usability testing, affinity mapping and desk research — I want to know what's true before I start designing.",
   },
   {
     title: "Interaction Design",
-    body: "Flows, hierarchies and states built so the next step is obvious and there's less to figure out.",
+    body: "Building flows and states so the next step is clear and people don't have to think too hard about what to do next.",
   },
   {
     title: "Prototyping",
-    body: "From rough sketches to high-fidelity interactive prototypes that can be put in front of real people.",
+    body: "From quick sketches to clickable high-fidelity prototypes I can put in front of users and watch them use.",
   },
   {
     title: "User Testing",
-    body: "Moderated and unmoderated sessions that surface real pain points and validate assumptions.",
+    body: "Moderated sessions where I watch real people try tasks, then use what breaks to guide the next round of design.",
   },
   {
     title: "Design Systems",
-    body: "Consistent, scalable component libraries that keep products coherent across touchpoints.",
+    body: "Organising reusable components so a product stays consistent without reinventing the same button every time.",
   },
   {
     title: "Psychology-Led Design",
-    body: "Behavioural science, mental models and cognitive principles applied so experiences feel effortless.",
+    body: "Using what I learned about memory, attention and decision-making to reduce friction and make choices easier.",
   },
 ];
 
