@@ -349,7 +349,7 @@ function Home() {
           <Reveal>
             <p className="label-mono text-clay">Why me</p>
             <h2 className="mt-3 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl">
-              Four things most junior UX candidates can't say.
+              A few things that shape how I work.
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
