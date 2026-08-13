@@ -415,6 +415,36 @@ function Home() {
         </div>
       </section>
 
+      <section className="border-b border-border bg-secondary/20">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+          <Reveal>
+            <p className="label-mono text-clay">Away from the screen</p>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight tracking-tight sm:text-5xl">
+              The rest of me, briefly.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              I'm close with my family — Sunday dinners are non-negotiable — and I have never met a
+              dog I didn't stop to greet. The habits below are also, quietly, how I got good at this
+              work: patience, pattern-spotting and a tolerance for sitting with a problem.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {PERSONAL.map((p, i) => (
+              <Reveal key={p.k} delay={i * 0.06}>
+                <motion.article
+                  whileHover={{ y: -5 }}
+                  transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                  className="h-full rounded-xl border border-border bg-card p-6"
+                >
+                  <h3 className="font-display text-xl leading-snug">{p.k}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.v}</p>
+                </motion.article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8">
           <Reveal>
