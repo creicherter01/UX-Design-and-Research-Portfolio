@@ -7,7 +7,9 @@ import {
   NumberedCards,
   OutcomeList,
   Section,
+  StatBand,
 } from "@/components/case-study-bits";
+
 import { Reveal } from "@/components/reveal";
 import afterHome from "@/assets/Screenshot_2026-07-09_102408.png.asset.json";
 import beforeHome from "@/assets/Screenshot_2026-07-23_102740.png.asset.json";
