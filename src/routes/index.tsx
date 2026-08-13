@@ -1,8 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion, useScroll, useTransform } from "motion/react";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import { useRef } from "react";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
-import { Reveal, RevealWords } from "@/components/reveal";
+import { Reveal, RevealChars } from "@/components/reveal";
+
 import { EMAIL, LINKEDIN } from "@/components/site-chrome";
 import dawsonAfter from "@/assets/Screenshot_2026-07-09_102408.png.asset.json";
 import flightCover from "@/assets/flight-booking-cover.jpg";
