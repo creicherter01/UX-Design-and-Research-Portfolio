@@ -56,6 +56,33 @@ const STATS = [
   { value: "Hi-Fi", label: "Research through to pixels" },
 ];
 
+const PERSONAL = [
+  {
+    k: "Always mid-book",
+    v: "Usually two at once — one fiction, one about how people think. It's where a lot of my research instincts come from.",
+  },
+  {
+    k: "Puzzles on the table",
+    v: "1,000 pieces, no picture-peeking. Same satisfaction as watching messy interview notes finally cluster into themes.",
+  },
+  {
+    k: "Running most mornings",
+    v: "My thinking time. Half my best ideas about a stuck screen show up somewhere around mile three.",
+  },
+  {
+    k: "Baking for people",
+    v: "I test recipes the way I test prototypes: change one variable, ask someone honest, adjust.",
+  },
+  {
+    k: "Exploring new towns",
+    v: "Weekend drives with no plan. I notice signage, menus and parking apps far more than I should.",
+  },
+  {
+    k: "Family and animals",
+    v: "Very close to my family, and a soft spot for every animal I meet — the pets get greeted before the people.",
+  },
+];
+
 const PROJECTS = [
   {
     to: "/work/dawson-motors" as const,
