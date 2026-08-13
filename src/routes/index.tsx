@@ -218,7 +218,7 @@ function Hero() {
             <img
               src={portrait.url}
               alt="Courtney Reicherter"
-              className="h-64 w-full object-cover object-[50%_52%] sm:h-80"
+              className="h-64 w-full object-cover object-[50%_35%] sm:h-80"
             />
             <div className="border-t border-border p-5">
               <p className="label-mono text-clay">Currently</p>
