@@ -292,6 +292,35 @@ function Home() {
       <Hero />
       <Marquee />
 
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+          <Reveal>
+            <p className="label-mono text-clay">Why me</p>
+            <h2 className="mt-3 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl">
+              Four things most junior UX candidates can't say.
+            </h2>
+          </Reveal>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            {EDGE.map((e, i) => (
+              <Reveal key={e.k} delay={i * 0.08}>
+                <motion.article
+                  whileHover={{ y: -6 }}
+                  transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                  className="h-full rounded-xl border border-border bg-card p-7"
+                >
+                  <span className="label-mono text-sage-deep">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-3 font-display text-2xl leading-snug">{e.k}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{e.v}</p>
+                </motion.article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       <section id="work" className="scroll-mt-20 border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <Reveal>
