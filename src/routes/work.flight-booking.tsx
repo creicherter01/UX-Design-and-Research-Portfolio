@@ -145,9 +145,9 @@ const OUTCOMES = [
 
 const TEST_STATS = [
   {
-    value: "+20%",
-    label: "Task-flow efficiency vs. the original booking sites we tested",
-    sub: "Moderated task timings, 8 participants",
+    value: "+10%",
+    label: "User satisfaction vs. the original test site",
+    sub: "Post-task satisfaction ratings, 8 participants",
   },
   {
     value: "9 → 6",
