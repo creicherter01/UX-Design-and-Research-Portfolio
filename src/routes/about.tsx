@@ -126,22 +126,23 @@ function AboutPage() {
           <Reveal>
             <p className="label-mono text-clay">Philosophy</p>
             <blockquote className="mt-4 font-display text-3xl leading-tight tracking-tight">
-              “Great design isn't just beautiful — it's functional, inclusive and human-centred.”
+              “The best design is the one nobody notices — it just works.”
             </blockquote>
           </Reveal>
           <Reveal delay={0.1} className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              Having a psychology background helps me not only in research but in the design phase
-              too — it tailors my thought process around real user needs instead of assumptions.
+              Psychology taught me to start with what people actually do, not what they say they'll
+              do. That habit carries into every screen I design: I want to know where someone gets
+              stuck before I decide what the fix looks like.
             </p>
             <p>
-              What fascinates me most is how small, intentional decisions transform how people
-              interact with a product. A single button placement, a clearer label, a simplified flow
-              — that's often the difference between frustration and delight.
+              I'm most interested in the small decisions that quietly shape an experience — a
+              clearer label, a better order of steps, a button placed where someone already expects
+              it. Those details are usually what separate a frustrating flow from an easy one.
             </p>
             <p>
-              My approach combines rigorous research, systematic design thinking and iterative
-              refinement, so every interaction has a reason to exist.
+              I work in loops: research, sketch, test, refine. Nothing stays because it looks nice;
+              it stays because it held up when real people tried to use it.
             </p>
           </Reveal>
         </div>
