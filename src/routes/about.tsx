@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
       {
         property: "og:description",
         content:
-          "From a B.A. in Psychology to end-to-end UX case studies — research, interaction design, prototyping and testing.",
+          "From a B.A. in Psychology to full UX case studies — research, interaction design, prototyping and testing.",
       },
     ],
   }),
