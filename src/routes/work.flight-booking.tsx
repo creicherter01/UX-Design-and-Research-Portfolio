@@ -247,6 +247,43 @@ function FlightCase() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mt-12">
+          <p className="label-mono text-clay">Research artefacts</p>
+          <h3 className="mt-2 font-display text-xl">Affinity diagram & journey map</h3>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            I clustered every interview note in Miro, then translated the clusters into a five-stage
+            journey map with the emotional curve of the booking task.{" "}
+            <a
+              href="https://miro.com/app/board/uXjVJmqObNk=/?share_link_id=991945260277"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline text-foreground"
+            >
+              View the full Miro board
+            </a>
+            .
+          </p>
+          <div className="mt-5 space-y-4">
+            {[
+              {
+                src: affinity.url,
+                cap: "Affinity diagram — raw interview notes clustered into user context, pain points, motivating factors, efficiency blockers and one shared value.",
+              },
+              {
+                src: journey.url,
+                cap: "Journey map — five stages from date and airport selection to payment, with context, goals, behaviours, pain points and the emotional curve.",
+              },
+            ].map((it) => (
+              <figure key={it.src} className="overflow-hidden rounded-lg border border-border bg-card">
+                <img src={it.src} alt={it.cap} loading="lazy" className="w-full" />
+                <figcaption className="label-mono border-t border-border p-3 text-muted-foreground">
+                  {it.cap}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </Reveal>
       </Section>
 
       <Section
