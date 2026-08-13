@@ -87,7 +87,7 @@ function AboutPage() {
           <div>
             <p className="label-mono text-clay">About</p>
             <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight sm:text-6xl">
-              <RevealWords text="I design for how people actually think." />
+              <RevealWords text="Designing for how people genuinely think, decide and behave." />
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               I'm Courtney — a UX designer and researcher with a psychology background. I specialise
@@ -112,7 +112,7 @@ function AboutPage() {
               <img
                 src={portrait.url}
                 alt="Portrait of Courtney Reicherter, UX designer and researcher"
-                className="aspect-[4/5] w-full object-cover object-top"
+                className="aspect-[4/5] w-full object-cover object-[50%_18%]"
               />
             </div>
           </Reveal>

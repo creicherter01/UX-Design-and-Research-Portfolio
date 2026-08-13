@@ -9,7 +9,7 @@ const NAV = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-export const LINKEDIN = "https://linkedin.com/in/courtney-reicherter-0b84b7297/";
+export const LINKEDIN = "https://www.linkedin.com/in/courtney-reicherter-0b84b7297";
 export const EMAIL = "creicherter01@gmail.com";
 
 export function ScrollProgress() {

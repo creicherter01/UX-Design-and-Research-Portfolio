@@ -17,6 +17,9 @@ import beforeInventory from "@/assets/Screenshot_2026-07-09_102449.png.asset.jso
 import afterContact from "@/assets/Screenshot_2026-07-20_194739.png.asset.json";
 import beforeService from "@/assets/Screenshot_2026-07-23_102814.png.asset.json";
 import beforeSales from "@/assets/Screenshot_2026-07-23_102848.png.asset.json";
+import afterHomeFull from "@/assets/Screenshot_2026-08-12_202402.png.asset.json";
+import afterSales from "@/assets/Screenshot_2026-08-12_202503.png.asset.json";
+import beforeContact from "@/assets/Screenshot_2026-07-20_194816.png.asset.json";
 
 export const Route = createFileRoute("/work/dawson-motors")({
   head: () => ({
@@ -217,27 +220,50 @@ function DawsonCase() {
             title="Homepage"
             note="The original buried the shop's two core offerings inside a flat navigation bar and a cramped inventory carousel. The redesign leads with trust and a clear choice."
             before={beforeHome.url}
-            after={afterHome.url}
+            after={afterHomeFull.url}
             beforeCaption="Before — flat grey nav buttons, cramped carousel, no hierarchy or trust signals."
             afterCaption="After — a confident hero headline, two CTAs split by intent, and trust stats above the fold."
           />
           <BeforeAfter
             title="Contact experience"
             note="Booking service and asking about a vehicle used to mean the same generic form. The redesign asks one question first — what do you need? — then adapts."
-            before={beforeSales.url}
+            before={beforeContact.url}
             after={afterContact.url}
-            beforeCaption="Before — plain-text hours and contact details appended to the bottom of a department page."
+            beforeCaption="Before — a required-field form with no guidance, plus contact details and hours as plain text columns."
             afterCaption="After — an intent selector splits the flow, with direct call and text options for people who'd rather skip the form."
           />
           <BeforeAfter
-            title="Inventory & service pages"
-            note="The original inventory strip and service page relied on dense text and third-party widgets; the redesign's component system gives both room to breathe."
+            title="Inventory browsing"
+            note="The original inventory lived in a cramped horizontal strip; the redesign turns it into a filterable grid with real photography, price, mileage and one clear action per card."
             before={beforeInventory.url}
-            after={beforeService.url}
-            beforeCaption="Before — an eight-across inventory carousel with truncated titles and tiny tap targets."
-            afterCaption="Before — the service page: centred paragraphs, logo clutter, and a buried booking link."
+            after={afterSales.url}
+            beforeCaption="Before — an eight-across carousel with truncated titles and tiny tap targets."
+            afterCaption="After — a filterable inventory grid: SUV, sedan, truck, AWD and price filters, with details surfaced on each card."
           />
         </div>
+        <Reveal className="mt-12">
+          <p className="label-mono text-clay">Audit artefacts</p>
+          <h3 className="mt-2 font-display text-xl">Other pages reviewed in the audit</h3>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                src: beforeService.url,
+                cap: "Before — the service page: centred paragraphs, logo clutter and a buried booking link.",
+              },
+              {
+                src: beforeSales.url,
+                cap: "Before — the sales department page: third-party badges above the actual inventory.",
+              },
+            ].map((it) => (
+              <figure key={it.src} className="overflow-hidden rounded-lg border border-border bg-card">
+                <img src={it.src} alt={it.cap} loading="lazy" className="w-full" />
+                <figcaption className="label-mono border-t border-border p-3 text-muted-foreground">
+                  {it.cap}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </Reveal>
       </Section>
 
       <Section
