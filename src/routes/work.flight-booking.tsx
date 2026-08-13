@@ -154,7 +154,7 @@ function FlightCase() {
           { label: "Tools", value: "Figma, Miro" },
           { label: "Type", value: "UX capstone project" },
         ]}
-        prototype="https://www.figma.com/make/79Uu2mYP7IxKzg7dlV6Bvx/High-Fidelity-Prototype--Copy-?fullscreen=1&t=q1JTf45eAVydBSLe-1"
+        prototype="https://www.figma.com/make/79Uu2mYP7IxKzg7dlV6Bvx/High-Fidelity-Prototype--Copy-?p=f&t=5jjsSvyrtXu0Mngr-0&fullscreen=1"
       />
 
       <section className="border-b border-border">
