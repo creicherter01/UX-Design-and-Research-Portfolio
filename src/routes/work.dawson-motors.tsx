@@ -165,7 +165,7 @@ function DawsonCase() {
           { label: "Tools", value: "Lovable, Figma" },
           { label: "Type", value: "Freelance client project" },
         ]}
-        prototype="https://lovable.dev/preview/8S4A72BshNFWRYaCLD2oNclWwuToxRZ7"
+        prototype="https://dawsonmotorsrefresh.netlify.app/"
       />
 
       <Section
