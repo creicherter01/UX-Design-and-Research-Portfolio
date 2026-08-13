@@ -21,7 +21,7 @@ export const Route = createFileRoute("/work/flight-booking")({
       {
         name: "description",
         content:
-          "A UX capstone from research to prototype: 12+ user interviews, journey mapping and usability testing turned a fragmented flight booking experience into one connected flow.",
+          "A UX capstone from research to prototype: 4 user interviews, journey mapping and usability testing turned a fragmented flight booking experience into one connected flow.",
       },
       {
         property: "og:title",
@@ -100,7 +100,7 @@ const PROCESS = [
     step: "01",
     title: "Research & testing",
     points: [
-      "Interviewed 12+ users across demographics",
+      "Interviewed 4 users across demographics",
       "Observed real booking sessions end to end",
       "Catalogued recurring frustrations and needs",
     ],
@@ -160,7 +160,7 @@ const TEST_STATS = [
     sub: "Up from 5 of 8 on the original flow",
   },
   {
-    value: "12+",
+    value: "4",
     label: "Users interviewed and observed booking end to end",
     sub: "Mixed ages and travel frequency",
   },
@@ -228,7 +228,7 @@ function FlightCase() {
       <Section
         eyebrow="Research"
         title="How I learned what actually breaks"
-        lede="Twelve-plus interviews, observed booking sessions, affinity mapping and journey maps across five stages — then usability walkthroughs to confirm the friction was structural rather than cosmetic."
+        lede="Four interviews, observed booking sessions, affinity mapping and journey maps across five stages — then usability walkthroughs to confirm the friction was structural rather than cosmetic."
         tone="muted"
       >
         <div className="grid gap-4 sm:grid-cols-2">

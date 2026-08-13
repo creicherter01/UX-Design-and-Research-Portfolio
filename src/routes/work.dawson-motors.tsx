@@ -162,7 +162,7 @@ function DawsonCase() {
         meta={[
           { label: "Role", value: "Freelance UX Designer (solo)" },
           { label: "Timeline", value: "June 2025" },
-          { label: "Tools", value: "Lovable, Figma" },
+          { label: "Tools", value: "Figma" },
           { label: "Type", value: "Freelance client project" },
         ]}
         prototype="https://dawsonmotorsrefresh.netlify.app/"
