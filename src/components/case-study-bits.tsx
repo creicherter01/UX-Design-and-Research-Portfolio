@@ -210,7 +210,39 @@ export function BeforeAfter({
   );
 }
 
+export function StatBand({
+  items,
+  note,
+}: {
+  items: { value: string; label: string; sub?: string }[];
+  note?: string;
+}) {
+  return (
+    <div>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {items.map((s, i) => (
+          <Reveal key={s.label} delay={i * 0.07}>
+            <div className="h-full rounded-lg border border-border bg-card p-6">
+              <p className="font-display text-4xl leading-none tracking-tight text-sage-deep">
+                {s.value}
+              </p>
+              <p className="mt-3 text-sm leading-snug">{s.label}</p>
+              {s.sub && (
+                <p className="label-mono mt-2 text-muted-foreground">{s.sub}</p>
+              )}
+            </div>
+          </Reveal>
+        ))}
+      </div>
+      {note && (
+        <p className="label-mono mt-5 max-w-3xl leading-relaxed text-muted-foreground">{note}</p>
+      )}
+    </div>
+  );
+}
+
 export function OutcomeList({ items }: { items: string[] }) {
+
   return (
     <ul className="grid gap-3 sm:grid-cols-2">
       {items.map((item, i) => (

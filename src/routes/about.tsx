@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, RevealWords } from "@/components/reveal";
 import { EMAIL, LINKEDIN } from "@/components/site-chrome";
+import portrait from "@/assets/courtney-portrait.png.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -81,30 +83,42 @@ function AboutPage() {
   return (
     <>
       <section className="paper-grain border-b border-border bg-secondary/30">
-        <div className="mx-auto max-w-5xl px-5 py-20 sm:px-8 sm:py-28">
-          <p className="label-mono text-clay">About</p>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight sm:text-6xl">
-            <RevealWords text="I design for how people actually think." />
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I'm Courtney — a UX designer and researcher with a psychology background. I specialise
-            in simplifying complex workflows and building interfaces that feel obvious in hindsight:
-            grounded in research, shaped by iteration, made to be inclusive.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            {["Empathy at the root", "Every pixel intentional", "Designed for everyone"].map(
-              (t) => (
-                <span
-                  key={t}
-                  className="label-mono rounded-full border border-border px-4 py-2 text-muted-foreground"
-                >
-                  {t}
-                </span>
-              ),
-            )}
+        <div className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-20 sm:grid-cols-[1.3fr_1fr] sm:px-8 sm:py-28">
+          <div>
+            <p className="label-mono text-clay">About</p>
+            <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight sm:text-6xl">
+              <RevealWords text="I design for how people actually think." />
+            </h1>
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              I'm Courtney — a UX designer and researcher with a psychology background. I specialise
+              in simplifying complex workflows and building interfaces that feel obvious in
+              hindsight: grounded in research, shaped by iteration, made to be inclusive.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-3">
+              {["Empathy at the root", "Every pixel intentional", "Designed for everyone"].map(
+                (t) => (
+                  <span
+                    key={t}
+                    className="label-mono rounded-full border border-border px-4 py-2 text-muted-foreground"
+                  >
+                    {t}
+                  </span>
+                ),
+              )}
+            </div>
           </div>
+          <Reveal delay={0.15} className="order-first sm:order-last">
+            <div className="overflow-hidden rounded-2xl border border-border bg-card">
+              <img
+                src={portrait.url}
+                alt="Portrait of Courtney Reicherter, UX designer and researcher"
+                className="aspect-[4/5] w-full object-cover object-top"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
+
 
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-5xl gap-12 px-5 py-16 sm:grid-cols-[1fr_1.2fr] sm:px-8 sm:py-20">

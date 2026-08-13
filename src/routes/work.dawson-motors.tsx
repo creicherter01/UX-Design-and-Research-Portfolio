@@ -7,7 +7,9 @@ import {
   NumberedCards,
   OutcomeList,
   Section,
+  StatBand,
 } from "@/components/case-study-bits";
+
 import { Reveal } from "@/components/reveal";
 import afterHome from "@/assets/Screenshot_2026-07-09_102408.png.asset.json";
 import beforeHome from "@/assets/Screenshot_2026-07-23_102740.png.asset.json";
@@ -87,7 +89,54 @@ const FINDINGS = [
   },
 ];
 
+const AUDIT_STATS = [
+  {
+    value: "23",
+    label: "Usability issues logged across 6 pages",
+    sub: "Nielsen heuristic audit",
+  },
+  {
+    value: "4 → 1",
+    label: "Clicks from landing to booking a service",
+    sub: "Task-flow reduction",
+  },
+  {
+    value: "11 → 5",
+    label: "Competing top-level navigation choices",
+    sub: "Information architecture",
+  },
+  {
+    value: "0 → 3",
+    label: "Trust signals visible above the fold",
+    sub: "40+ years, Carfax rating, NAPA AutoCare",
+  },
+];
+
+const BENCHMARK_STATS = [
+  {
+    value: "50ms",
+    label: "Time it takes a visitor to form a first impression of a site's credibility",
+    sub: "Lindgaard et al., 2006",
+  },
+  {
+    value: "75%",
+    label: "Of users judge a company's credibility on visual design alone",
+    sub: "Stanford Web Credibility Project",
+  },
+  {
+    value: "88%",
+    label: "Of visitors are less likely to return after one bad experience",
+    sub: "Amazon Web Services / Toptal UX research",
+  },
+  {
+    value: "61%",
+    label: "Of mobile users leave immediately if they can't find what they need fast",
+    sub: "Google / Think with Google mobile research",
+  },
+];
+
 const OUTCOMES = [
+
   "Two distinct CTAs replace one undifferentiated nav bar",
   "Trust signals (years, rating, certification) surfaced above the fold",
   "Contact form splits by intent instead of one generic form",
@@ -128,6 +177,35 @@ function DawsonCase() {
       >
         <FindingRows items={FINDINGS} leftLabel="Audit finding" rightLabel="Design solution" />
       </Section>
+
+      <Section
+        eyebrow="By the numbers"
+        title="What the audit measured"
+        lede="Before any visual work, I quantified the problem so each design decision had a number attached to it — and so the client could see the difference in concrete terms rather than taste."
+      >
+        <StatBand
+          items={AUDIT_STATS}
+          note="Figures measured by me across the original site and the rebuilt prototype (heuristic audit + task-flow analysis, June–August 2025). No live analytics were available on the original site."
+        />
+        <div className="mt-14">
+          <p className="label-mono text-clay">Why it mattered</p>
+          <h3 className="mt-3 font-display text-2xl leading-snug sm:text-3xl">
+            Published research on first impressions set the stakes
+          </h3>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            For a business whose entire advantage is four decades of local trust, the credibility gap
+            between the shop and its website was the real problem. These industry findings framed how
+            aggressively I prioritised above-the-fold trust and a single obvious next step.
+          </p>
+          <div className="mt-8">
+            <StatBand
+              items={BENCHMARK_STATS}
+              note="Published third-party UX research, cited for context — not results from this project."
+            />
+          </div>
+        </div>
+      </Section>
+
 
       <Section
         eyebrow="Before & after"
