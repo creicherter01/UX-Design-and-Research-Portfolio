@@ -50,7 +50,7 @@ const MARQUEE = [
 ];
 
 const STATS = [
-  { value: "2", label: "End-to-end case studies" },
+  { value: "2", label: "Full case studies" },
   { value: "12+", label: "Users interviewed per project" },
   { value: "B.A.", label: "Psychology, Binghamton" },
   { value: "Hi-Fi", label: "Research through to pixels" },
