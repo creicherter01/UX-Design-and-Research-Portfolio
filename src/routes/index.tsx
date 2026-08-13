@@ -122,8 +122,9 @@ function Hero() {
 
       <motion.div
         style={{ y, opacity: fade, scale }}
-        className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32"
+        className="relative mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.25fr_0.75fr] lg:items-center lg:gap-14"
       >
+        <div>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
