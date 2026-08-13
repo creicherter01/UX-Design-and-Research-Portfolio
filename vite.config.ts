@@ -12,7 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-  // Use Netlify's build target when deploying to Netlify, otherwise keep Lovable's default.
-  nitro: process.env["NETLIFY"] ? { preset: "netlify-static" } : false,
+  // Netlify needs its server preset because TanStack Start renders routes on the server.
+  // Lovable keeps using its own default deployment target outside Netlify.
+  nitro: process.env["NETLIFY"] ? { preset: "netlify" } : true,
 });
 
