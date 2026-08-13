@@ -25,6 +25,17 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [copied, setCopied] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const body = `${form.message}\n\n—\n${form.name}\n${form.email}`;
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(
+      form.subject,
+    )}&body=${encodeURIComponent(body)}`;
+    setSent(true);
+  };
 
   const copy = async () => {
     try {
