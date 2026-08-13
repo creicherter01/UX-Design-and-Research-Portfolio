@@ -405,15 +405,15 @@ function Home() {
           </Reveal>
           <Reveal delay={0.1} className="space-y-6">
             <p className="text-base leading-relaxed text-muted-foreground">
-              A psychology background changes the questions I ask. Instead of “does this look
-              right?”, I'm asking what mental model someone brings, where cognitive load spikes, and
-              which single decision would remove the most friction.
+              My background changes the questions I ask. Instead of “does this look right?”, I want
+              to know what someone already expects, where they hesitate, and which single change
+              would make the next step feel obvious.
             </p>
             <div className="grid gap-3 sm:grid-cols-3">
               {[
-                { k: "Understand", v: "Interviews, desk research, heuristic audits" },
-                { k: "Frame", v: "Affinity maps, journeys, personas, priorities" },
-                { k: "Build & test", v: "Wireframes, hi-fi prototypes, usability rounds" },
+                { k: "Understand", v: "Talk to people, watch them work, audit what's already live" },
+                { k: "Frame", v: "Cluster notes, map the journey, decide what matters most" },
+                { k: "Build & test", v: "Prototype fast, put it in front of users, refine" },
               ].map((s) => (
                 <div key={s.k} className="rounded-lg border border-border bg-card p-5">
                   <p className="label-mono text-sage-deep">{s.k}</p>
