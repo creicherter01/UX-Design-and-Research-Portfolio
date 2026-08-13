@@ -166,7 +166,7 @@ function Hero() {
           UX Designer &amp; Researcher · Psychology-led research
         </motion.p>
 
-        <h1 className="mt-8 font-display text-[2.6rem] leading-[0.92] tracking-[-0.03em] sm:text-6xl lg:text-[5.4rem]">
+        <h1 className="mt-8 pb-[0.12em] font-display text-[2.6rem] leading-[1] tracking-[-0.03em] sm:text-6xl lg:text-[5.4rem]">
           <span className="block">
             <RevealChars text="Read the room." delay={0.9} />
           </span>
