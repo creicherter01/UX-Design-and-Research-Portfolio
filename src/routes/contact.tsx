@@ -126,7 +126,7 @@ function ContactPage() {
           <Reveal>
             <p className="label-mono text-clay">Send a message</p>
             <h2 className="mt-3 font-display text-3xl tracking-tight sm:text-4xl">
-              Tell me what you're working on
+              I'd love to connect
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
               Fill this in and it lands straight in my inbox at {EMAIL}.

@@ -159,20 +159,7 @@ function FlightCase() {
 
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-5 py-12 sm:px-8">
-          <Reveal className="overflow-hidden rounded-lg border border-border bg-secondary/40">
-            <img
-              src={flightCover}
-              alt="High-fidelity flight results and seat selection screens from the prototype"
-              width={1232}
-              height={912}
-              loading="lazy"
-              className="w-full"
-            />
-          </Reveal>
-          <p className="label-mono mt-3 text-muted-foreground">
-            High-fidelity flow — results card, inline seat map and plain-language inclusions.
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {[
               {
                 src: protoResults.url,
