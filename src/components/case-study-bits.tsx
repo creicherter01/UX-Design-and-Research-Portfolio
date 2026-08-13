@@ -162,7 +162,7 @@ export function BeforeAfter({
   beforeCaption: string;
   afterCaption: string;
 }) {
-  const [view, setView] = useState<"before" | "after">("after");
+  const [view, setView] = useState<"before" | "after">("before");
   const src = view === "after" ? after : before;
   const caption = view === "after" ? afterCaption : beforeCaption;
 

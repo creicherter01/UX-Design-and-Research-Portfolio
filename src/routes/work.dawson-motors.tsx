@@ -217,8 +217,8 @@ function DawsonCase() {
 
       <Section
         eyebrow="Before & after"
-        title="Homepage and contact, side by side"
-        lede="Toggle each comparison to see what changed and why."
+        title="Two comparisons that carry the redesign"
+        lede="Each comparison opens on the original site — toggle to After to see what changed and why."
       >
         <div className="space-y-6">
           <BeforeAfter
@@ -230,34 +230,26 @@ function DawsonCase() {
             afterCaption="After — a confident hero headline, two CTAs split by intent, and trust stats above the fold."
           />
           <BeforeAfter
-            title="Contact experience"
-            note="Booking service and asking about a vehicle used to mean the same generic form. The redesign asks one question first — what do you need? — then adapts."
-            before={beforeContact.url}
-            after={afterContact.url}
-            beforeCaption="Before — a required-field form with no guidance, plus contact details and hours as plain text columns."
-            afterCaption="After — an intent selector splits the flow, with direct call and text options for people who'd rather skip the form."
-          />
-          <BeforeAfter
-            title="Inventory browsing"
-            note="The original inventory lived in a cramped horizontal strip; the redesign turns it into a filterable grid with real photography, price, mileage and one clear action per card."
-            before={beforeInventory.url}
-            after={afterSales.url}
-            beforeCaption="Before — an eight-across carousel with truncated titles and tiny tap targets."
-            afterCaption="After — a filterable inventory grid: SUV, sedan, truck, AWD and price filters, with details surfaced on each card."
+            title="Service & repair"
+            note="Service is the shop's highest-intent page, but the original opened with centred paragraphs and vendor logos. The redesign states the offer, then makes booking or calling a one-tap decision."
+            before={beforeService.url}
+            after={afterService.url}
+            beforeCaption="Before — centred paragraphs, logo clutter and a buried booking link."
+            afterCaption="After — a direct headline, NAPA credibility in one line, and Schedule Service plus a tap-to-call number."
           />
         </div>
         <Reveal className="mt-12">
-          <p className="label-mono text-clay">Audit artefacts</p>
-          <h3 className="mt-2 font-display text-xl">Other pages reviewed in the audit</h3>
+          <p className="label-mono text-clay">Also redesigned</p>
+          <h3 className="mt-2 font-display text-xl">Contact and inventory</h3>
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
             {[
               {
-                src: beforeService.url,
-                cap: "Before — the service page: centred paragraphs, logo clutter and a buried booking link.",
+                src: afterContact.url,
+                cap: "Contact — an intent selector splits service from sales, with direct call and text options for anyone who'd rather skip the form.",
               },
               {
-                src: beforeSales.url,
-                cap: "Before — the sales department page: third-party badges above the actual inventory.",
+                src: afterSales.url,
+                cap: "Inventory — the cramped carousel became a filterable grid with price, mileage and one clear action per card.",
               },
             ].map((it) => (
               <figure key={it.src} className="overflow-hidden rounded-lg border border-border bg-card">
