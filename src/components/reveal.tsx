@@ -23,7 +23,43 @@ export function Reveal({ children, delay = 0, y = 24, className }: RevealProps) 
   );
 }
 
+export function RevealChars({
+  text,
+  className,
+  delay = 0,
+  stagger = 0.028,
+}: {
+  text: string;
+  className?: string;
+  delay?: number;
+  stagger?: number;
+}) {
+  const reduce = useReducedMotion();
+  const chars = Array.from(text);
+  return (
+    <span className={className} aria-label={text}>
+      {chars.map((ch, i) => (
+        <span key={`${ch}-${i}`} className="inline-block overflow-hidden align-bottom" aria-hidden>
+          <motion.span
+            className="inline-block"
+            initial={reduce ? { opacity: 0 } : { y: "115%", opacity: 0, rotate: 6 }}
+            animate={{ y: "0%", opacity: 1, rotate: 0 }}
+            transition={{
+              duration: 1,
+              delay: delay + i * stagger,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+          >
+            {ch === " " ? "\u00A0" : ch}
+          </motion.span>
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export function RevealWords({
+
   text,
   className,
   delay = 0,
