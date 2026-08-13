@@ -22,13 +22,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Psychology-led UX design portfolio: two end-to-end case studies covering research, interaction design and high-fidelity prototyping — flight booking and a family auto shop redesign.",
+          "Psychology-led UX design portfolio: two full case studies covering research, interaction design and high-fidelity prototyping — flight booking and a family auto shop redesign.",
       },
       { property: "og:title", content: "Courtney Reicherter — UX Designer & Researcher" },
       {
         property: "og:description",
         content:
-          "Psychology-led UX portfolio with two end-to-end case studies: research, interaction design and high-fidelity prototypes.",
+          "Psychology-led UX portfolio with two full case studies: research, interaction design and high-fidelity prototypes.",
       },
       { property: "og:image", content: dawsonAfter.url },
       { name: "twitter:image", content: dawsonAfter.url },
