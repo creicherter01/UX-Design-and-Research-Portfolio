@@ -13,6 +13,7 @@ import { Reveal, RevealChars } from "@/components/reveal";
 import { EMAIL, LINKEDIN } from "@/components/site-chrome";
 import dawsonAfter from "@/assets/Screenshot_2026-07-09_102408.png.asset.json";
 import flightCover from "@/assets/Screenshot_2026-08-12_202729.png.asset.json";
+import portrait from "@/assets/courtney-portrait.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,6 +54,33 @@ const STATS = [
   { value: "12+", label: "Users interviewed per project" },
   { value: "B.A.", label: "Psychology, Binghamton" },
   { value: "Hi-Fi", label: "Research through to pixels" },
+];
+
+const PERSONAL = [
+  {
+    k: "Always mid-book",
+    v: "Usually two at once — one fiction, one about how people think. It's where a lot of my research instincts come from.",
+  },
+  {
+    k: "Puzzles on the table",
+    v: "1,000 pieces, no picture-peeking. Same satisfaction as watching messy interview notes finally cluster into themes.",
+  },
+  {
+    k: "Running most mornings",
+    v: "My thinking time. Half my best ideas about a stuck screen show up somewhere around mile three.",
+  },
+  {
+    k: "Baking for people",
+    v: "I test recipes the way I test prototypes: change one variable, ask someone honest, adjust.",
+  },
+  {
+    k: "Exploring new towns",
+    v: "Weekend drives with no plan. I notice signage, menus and parking apps far more than I should.",
+  },
+  {
+    k: "Family and animals",
+    v: "Very close to my family, and a soft spot for every animal I meet — the pets get greeted before the people.",
+  },
 ];
 
 const PROJECTS = [
@@ -122,8 +150,9 @@ function Hero() {
 
       <motion.div
         style={{ y, opacity: fade, scale }}
-        className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32"
+        className="relative mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.25fr_0.75fr] lg:items-center lg:gap-14"
       >
+        <div>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -137,7 +166,7 @@ function Hero() {
           UX Designer &amp; Researcher · Psychology-led research
         </motion.p>
 
-        <h1 className="mt-8 max-w-5xl font-display text-[2.6rem] leading-[0.92] tracking-[-0.03em] sm:text-7xl lg:text-[7rem]">
+        <h1 className="mt-8 font-display text-[2.6rem] leading-[0.92] tracking-[-0.03em] sm:text-6xl lg:text-[5.4rem]">
           <span className="block">
             <RevealChars text="Read the room." delay={0.9} />
           </span>
@@ -153,7 +182,7 @@ function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 2 }}
-          className="mt-12 grid gap-8 sm:grid-cols-[1.1fr_1fr] sm:items-end"
+          className="mt-10 grid gap-8 sm:items-end"
         >
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
             I'm <span className="text-foreground">Courtney Reicherter</span> — a UX designer with a
@@ -161,7 +190,7 @@ function Hero() {
             data-analyst's appetite for evidence. Most portfolios show you screens. Mine shows you
             <span className="text-foreground"> why every screen looks the way it does.</span>
           </p>
-          <div className="flex flex-wrap gap-3 sm:justify-end">
+          <div className="flex flex-wrap gap-3">
             <a
               href="#work"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
@@ -177,6 +206,43 @@ function Hero() {
             </Link>
           </div>
         </motion.div>
+        </div>
+
+        <motion.aside
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 1.4 }}
+          className="relative"
+        >
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+            className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+          >
+            <img
+              src={portrait.url}
+              alt="Courtney Reicherter"
+              className="h-64 w-full object-cover object-[50%_52%] sm:h-80"
+            />
+            <div className="border-t border-border p-5">
+              <p className="label-mono text-clay">Currently</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Based in New York, looking for a UX role where research actually shapes the design.
+                Off the clock: a book, a half-finished puzzle, and something in the oven.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {["Reading", "Puzzles", "Running", "Baking", "Dog person"].map((t) => (
+                  <span
+                    key={t}
+                    className="label-mono rounded-full bg-secondary px-3 py-1 text-secondary-foreground"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </motion.aside>
       </motion.div>
 
       <div className="relative border-t border-border">
@@ -373,6 +439,36 @@ function Home() {
               More about my background
             </Link>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-secondary/20">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+          <Reveal>
+            <p className="label-mono text-clay">Away from the screen</p>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight tracking-tight sm:text-5xl">
+              The rest of me, briefly.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              I'm close with my family — Sunday dinners are non-negotiable — and I have never met a
+              dog I didn't stop to greet. The habits below are also, quietly, how I got good at this
+              work: patience, pattern-spotting and a tolerance for sitting with a problem.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {PERSONAL.map((p, i) => (
+              <Reveal key={p.k} delay={i * 0.06}>
+                <motion.article
+                  whileHover={{ y: -5 }}
+                  transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                  className="h-full rounded-xl border border-border bg-card p-6"
+                >
+                  <h3 className="font-display text-xl leading-snug">{p.k}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.v}</p>
+                </motion.article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

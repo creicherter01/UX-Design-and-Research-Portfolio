@@ -21,7 +21,7 @@ export const Route = createFileRoute("/work/flight-booking")({
       {
         name: "description",
         content:
-          "An end-to-end UX capstone: 12+ user interviews, journey mapping and usability testing turned a fragmented flight booking experience into one seamless, unified flow.",
+          "An end-to-end UX capstone: 12+ user interviews, journey mapping and usability testing turned a fragmented flight booking experience into one connected flow.",
       },
       {
         property: "og:title",
@@ -145,9 +145,9 @@ const OUTCOMES = [
 
 const TEST_STATS = [
   {
-    value: "+20%",
-    label: "Task-flow efficiency vs. the original booking sites we tested",
-    sub: "Moderated task timings, 8 participants",
+    value: "+10%",
+    label: "User satisfaction vs. the original test site",
+    sub: "Post-task satisfaction ratings, 8 participants",
   },
   {
     value: "9 → 6",
@@ -172,7 +172,7 @@ function FlightCase() {
       <CaseHero
         index="02"
         title="Find Your Perfect Flight"
-        intro="I reimagined flight booking as one seamless, intuitive experience — a unified interface that searches hundreds of airlines and travel sites at once, so travellers stop stitching the journey together themselves."
+        intro="I redesigned flight booking as a single interface that searches hundreds of airlines and travel sites at once, so travellers stop stitching the journey together themselves."
         meta={[
           { label: "Role", value: "UX Designer & Researcher (solo)" },
           { label: "Timeline", value: "Feb – Mar 2026" },
