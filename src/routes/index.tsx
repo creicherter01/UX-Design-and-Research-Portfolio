@@ -190,7 +190,7 @@ function Hero() {
             data-analyst's appetite for evidence. Most portfolios show you screens. Mine shows you
             <span className="text-foreground"> why every screen looks the way it does.</span>
           </p>
-          <div className="flex flex-wrap gap-3 sm:justify-end">
+          <div className="flex flex-wrap gap-3">
             <a
               href="#work"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
@@ -222,7 +222,7 @@ function Hero() {
             <img
               src={portrait.url}
               alt="Courtney Reicherter"
-              className="h-64 w-full object-cover object-[50%_28%] sm:h-80"
+              className="h-64 w-full object-cover object-[50%_52%] sm:h-80"
             />
             <div className="border-t border-border p-5">
               <p className="label-mono text-clay">Currently</p>
