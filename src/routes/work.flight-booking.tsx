@@ -299,7 +299,7 @@ function FlightCase() {
       <Section
         eyebrow="The result"
         title="What the final prototype delivers"
-        lede="A high-fidelity, end-to-end booking flow — search, compare, seats, baggage, confirmation — designed around efficiency and clarity at every step."
+        lede="A high-fidelity booking flow — search, compare, seats, baggage, confirmation — designed around efficiency and clarity at every step."
         tone="muted"
       >
         <OutcomeList items={OUTCOMES} />
