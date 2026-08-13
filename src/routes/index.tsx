@@ -12,7 +12,7 @@ import { Reveal, RevealChars } from "@/components/reveal";
 
 import { EMAIL, LINKEDIN } from "@/components/site-chrome";
 import dawsonAfter from "@/assets/Screenshot_2026-07-09_102408.png.asset.json";
-import flightCover from "@/assets/flight-booking-cover.jpg";
+import flightCover from "@/assets/Screenshot_2026-08-12_202729.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -74,7 +74,7 @@ const PROJECTS = [
       "Reimagining a fragmented flight booking experience as one unified interface that searches hundreds of airlines at once.",
     tags: ["UX Research", "Interaction Design", "Prototyping"],
     kind: "UX capstone project",
-    image: flightCover,
+    image: flightCover.url,
   },
 ];
 
