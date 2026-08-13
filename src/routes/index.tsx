@@ -226,25 +226,6 @@ function Hero() {
                 Based in New York, looking for a UX role where research actually shapes the design.
                 Off the clock: a book, a half-finished puzzle, and something in the oven.
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {[
-                  "User research",
-                  "Reading",
-                  "Usability testing",
-                  "Puzzles",
-                  "Prototyping",
-                  "Running",
-                  "Psychology-led",
-                  "Baking",
-                ].map((t) => (
-                  <span
-                    key={t}
-                    className="label-mono rounded-full bg-secondary px-3 py-1 text-secondary-foreground"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </motion.aside>
