@@ -59,7 +59,7 @@ const SKILLS = [
   },
   {
     title: "Interaction Design",
-    body: "Flows, hierarchies and micro-interactions that feel intuitive — reducing friction at every step.",
+    body: "Flows, hierarchies and states built so the next step is obvious and there's less to figure out.",
   },
   {
     title: "Prototyping",
