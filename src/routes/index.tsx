@@ -214,11 +214,7 @@ function Hero() {
           transition={{ duration: 0.9, delay: 1.4 }}
           className="relative"
         >
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-            className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
-          >
+          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-transform duration-500 hover:-translate-y-1">
             <img
               src={portrait.url}
               alt="Courtney Reicherter"
@@ -241,7 +237,7 @@ function Hero() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </motion.aside>
       </motion.div>
 
