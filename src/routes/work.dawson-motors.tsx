@@ -89,7 +89,54 @@ const FINDINGS = [
   },
 ];
 
+const AUDIT_STATS = [
+  {
+    value: "23",
+    label: "Usability issues logged across 6 pages",
+    sub: "Nielsen heuristic audit",
+  },
+  {
+    value: "4 → 1",
+    label: "Clicks from landing to booking a service",
+    sub: "Task-flow reduction",
+  },
+  {
+    value: "11 → 5",
+    label: "Competing top-level navigation choices",
+    sub: "Information architecture",
+  },
+  {
+    value: "0 → 3",
+    label: "Trust signals visible above the fold",
+    sub: "40+ years, Carfax rating, NAPA AutoCare",
+  },
+];
+
+const BENCHMARK_STATS = [
+  {
+    value: "50ms",
+    label: "Time it takes a visitor to form a first impression of a site's credibility",
+    sub: "Lindgaard et al., 2006",
+  },
+  {
+    value: "75%",
+    label: "Of users judge a company's credibility on visual design alone",
+    sub: "Stanford Web Credibility Project",
+  },
+  {
+    value: "88%",
+    label: "Of visitors are less likely to return after one bad experience",
+    sub: "Amazon Web Services / Toptal UX research",
+  },
+  {
+    value: "61%",
+    label: "Of mobile users leave immediately if they can't find what they need fast",
+    sub: "Google / Think with Google mobile research",
+  },
+];
+
 const OUTCOMES = [
+
   "Two distinct CTAs replace one undifferentiated nav bar",
   "Trust signals (years, rating, certification) surfaced above the fold",
   "Contact form splits by intent instead of one generic form",
