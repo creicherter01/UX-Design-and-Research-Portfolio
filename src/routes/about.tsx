@@ -47,8 +47,8 @@ const JOURNEY = [
   {
     step: "04",
     kicker: "The commitment",
-    title: "Human needs at the centre of innovation",
-    body: "As technology accelerates, I'm committed to keeping human needs at the centre. That means asking harder questions, listening more carefully, and designing with both rigour and empathy — every single time.",
+    title: "Keeping real people in the room",
+    body: "However fast the tools change, the decisions still land on someone trying to get something done. So I keep asking harder questions, listening longer, and testing with real people before I call anything finished.",
   },
 ];
 
