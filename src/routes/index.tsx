@@ -178,6 +178,43 @@ function Hero() {
             </Link>
           </div>
         </motion.div>
+        </div>
+
+        <motion.aside
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 1.4 }}
+          className="relative"
+        >
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+            className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+          >
+            <img
+              src={portrait.url}
+              alt="Courtney Reicherter"
+              className="h-64 w-full object-cover object-[50%_28%] sm:h-80"
+            />
+            <div className="border-t border-border p-5">
+              <p className="label-mono text-clay">Currently</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Based in New York, looking for a UX role where research actually shapes the design.
+                Off the clock: a book, a half-finished puzzle, and something in the oven.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {["Reading", "Puzzles", "Running", "Baking", "Dog person"].map((t) => (
+                  <span
+                    key={t}
+                    className="label-mono rounded-full bg-secondary px-3 py-1 text-secondary-foreground"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </motion.aside>
       </motion.div>
 
       <div className="relative border-t border-border">
