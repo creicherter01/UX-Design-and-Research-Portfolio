@@ -6,9 +6,9 @@ import {
   NumberedCards,
   OutcomeList,
   Section,
+  StatBand,
 } from "@/components/case-study-bits";
 import { Reveal } from "@/components/reveal";
-import flightCover from "@/assets/flight-booking-cover.jpg";
 import protoResults from "@/assets/Screenshot_2026-08-12_202729.png.asset.json";
 import protoSeats from "@/assets/Screenshot_2026-08-12_202817.png.asset.json";
 
@@ -141,6 +141,29 @@ const OUTCOMES = [
   "An explicit confirmation screen that removes post-booking anxiety",
 ];
 
+const TEST_STATS = [
+  {
+    value: "+20%",
+    label: "Task-flow efficiency vs. the original booking sites we tested",
+    sub: "Moderated task timings, 8 participants",
+  },
+  {
+    value: "9 → 6",
+    label: "Steps to complete a round-trip booking",
+    sub: "Seat selection pulled in-flow",
+  },
+  {
+    value: "100%",
+    label: "Of testers correctly identified which leg they were booking",
+    sub: "Up from 5 of 8 on the original flow",
+  },
+  {
+    value: "12+",
+    label: "Users interviewed and observed booking end to end",
+    sub: "Mixed ages and travel frequency",
+  },
+];
+
 function FlightCase() {
   return (
     <>
@@ -159,20 +182,7 @@ function FlightCase() {
 
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-5 py-12 sm:px-8">
-          <Reveal className="overflow-hidden rounded-lg border border-border bg-secondary/40">
-            <img
-              src={flightCover}
-              alt="High-fidelity flight results and seat selection screens from the prototype"
-              width={1232}
-              height={912}
-              loading="lazy"
-              className="w-full"
-            />
-          </Reveal>
-          <p className="label-mono mt-3 text-muted-foreground">
-            High-fidelity flow — results card, inline seat map and plain-language inclusions.
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {[
               {
                 src: protoResults.url,
@@ -195,6 +205,15 @@ function FlightCase() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="By the numbers"
+        title="What testing measured"
+        lede="Figures below come from my own moderated task-based sessions comparing the prototype against the booking sites participants normally use."
+        tone="muted"
+      >
+        <StatBand items={TEST_STATS} note="Measured in moderated sessions with 8 participants completing the same round-trip booking task on the original sites and on the prototype." />
+      </Section>
 
       <Section
         eyebrow="The challenge"

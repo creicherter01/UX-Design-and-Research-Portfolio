@@ -112,7 +112,7 @@ function AboutPage() {
               <img
                 src={portrait.url}
                 alt="Portrait of Courtney Reicherter, UX designer and researcher"
-                className="aspect-[4/5] w-full object-cover object-[50%_18%]"
+                className="aspect-[4/5] w-full object-cover object-[50%_42%]"
               />
             </div>
           </Reveal>
