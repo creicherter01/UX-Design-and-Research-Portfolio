@@ -13,5 +13,6 @@ export default defineConfig({
     server: { entry: "server" },
   },
   // Use Netlify's build target when deploying to Netlify, otherwise keep Lovable's default.
-  nitro: process.env.NETLIFY ? { preset: "netlify-static" } : undefined,
+  nitro: process.env["NETLIFY"] ? { preset: "netlify-static" } : false,
 });
+
