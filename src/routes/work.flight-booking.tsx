@@ -9,6 +9,8 @@ import {
 } from "@/components/case-study-bits";
 import { Reveal } from "@/components/reveal";
 import flightCover from "@/assets/flight-booking-cover.jpg";
+import protoResults from "@/assets/Screenshot_2026-08-12_202729.png.asset.json";
+import protoSeats from "@/assets/Screenshot_2026-08-12_202817.png.asset.json";
 
 export const Route = createFileRoute("/work/flight-booking")({
   head: () => ({
@@ -170,6 +172,27 @@ function FlightCase() {
           <p className="label-mono mt-3 text-muted-foreground">
             High-fidelity flow — results card, inline seat map and plain-language inclusions.
           </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                src: protoResults.url,
+                cap: "Step 1 of 2 — departing flight results, with the leg stated explicitly and fares compared side by side.",
+              },
+              {
+                src: protoSeats.url,
+                cap: "Seat selection built into the flow — interactive map, cabin zones and a legend, no third-party redirect.",
+              },
+            ].map((it) => (
+              <Reveal key={it.src}>
+                <figure className="h-full overflow-hidden rounded-lg border border-border bg-card">
+                  <img src={it.src} alt={it.cap} loading="lazy" className="w-full" />
+                  <figcaption className="label-mono border-t border-border p-3 text-muted-foreground">
+                    {it.cap}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

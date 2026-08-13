@@ -134,10 +134,10 @@ function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-clay opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-clay" />
           </span>
-          Psychology grad · UX designer · Open to roles, 2026
+          UX Designer &amp; Researcher · Psychology-led research
         </motion.p>
 
-        <h1 className="mt-8 max-w-5xl font-display text-[3.1rem] leading-[0.9] tracking-[-0.03em] sm:text-8xl lg:text-[8.5rem]">
+        <h1 className="mt-8 max-w-5xl font-display text-[2.6rem] leading-[0.92] tracking-[-0.03em] sm:text-7xl lg:text-[7rem]">
           <span className="block">
             <RevealChars text="Read the room." delay={0.9} />
           </span>
