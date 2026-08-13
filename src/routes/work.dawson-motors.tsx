@@ -13,10 +13,9 @@ import {
 import { Reveal } from "@/components/reveal";
 import afterHome from "@/assets/Screenshot_2026-07-09_102408.png.asset.json";
 import beforeHome from "@/assets/Screenshot_2026-07-23_102740.png.asset.json";
-import beforeInventory from "@/assets/Screenshot_2026-07-09_102449.png.asset.json";
 import afterContact from "@/assets/Screenshot_2026-07-20_194739.png.asset.json";
 import beforeService from "@/assets/Screenshot_2026-07-23_102814.png.asset.json";
-import beforeSales from "@/assets/Screenshot_2026-07-23_102848.png.asset.json";
+import afterService from "@/assets/dawson-service-after.png.asset.json";
 import afterHomeFull from "@/assets/Screenshot_2026-08-12_202402.png.asset.json";
 import afterSales from "@/assets/Screenshot_2026-08-12_202503.png.asset.json";
 import beforeContact from "@/assets/Screenshot_2026-07-20_194816.png.asset.json";
