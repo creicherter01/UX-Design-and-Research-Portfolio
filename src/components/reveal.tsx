@@ -39,7 +39,11 @@ export function RevealChars({
   return (
     <span className={className} aria-label={text}>
       {chars.map((ch, i) => (
-        <span key={`${ch}-${i}`} className="-mb-[0.16em] inline-block overflow-hidden pb-[0.16em] align-bottom" aria-hidden>
+        <span
+          key={`${ch}-${i}`}
+          className="-mb-[0.32em] -mr-[0.06em] inline-block overflow-hidden pb-[0.32em] pr-[0.06em] align-bottom"
+          aria-hidden
+        >
           <motion.span
             className="inline-block"
             initial={reduce ? { opacity: 0 } : { y: "115%", opacity: 0, rotate: 6 }}
