@@ -53,7 +53,7 @@ const STATS = [
   { value: "2", label: "Full case studies" },
   { value: "4", label: "Users interviewed per project" },
   { value: "B.A.", label: "Psychology, Binghamton" },
-  { value: "Hi-Fi", label: "Research through to pixels" },
+  { value: "Hi-Fi", label: "Research through to final screens" },
 ];
 
 const PERSONAL = [
@@ -247,7 +247,7 @@ function Hero() {
 
 const EDGE = [
   {
-    k: "I start with people, not pixels",
+    k: "I start with people, not mockups",
     v: "Psychology taught me how to ask better questions: what mental model someone brings, where they get stuck, and what would make the next step obvious.",
   },
   {
@@ -400,7 +400,7 @@ function Home() {
             <h2 className="mt-3 font-display text-4xl leading-tight tracking-tight">
               Psychology first,
               <br />
-              pixels second.
+              interface second.
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="space-y-6">
