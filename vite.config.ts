@@ -14,6 +14,6 @@ export default defineConfig({
   },
   // Netlify needs its server preset because TanStack Start renders routes on the server.
   // Lovable keeps using its own default deployment target outside Netlify.
-  nitro: process.env["NETLIFY"] ? { preset: "netlify" } : undefined,
+  nitro: process.env["NETLIFY"] ? { preset: "netlify" } : true,
 });
 
