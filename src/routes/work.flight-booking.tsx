@@ -172,7 +172,7 @@ function FlightCase() {
       <CaseHero
         index="02"
         title="Find Your Perfect Flight"
-        intro="I reimagined flight booking as one seamless, intuitive experience — a unified interface that searches hundreds of airlines and travel sites at once, so travellers stop stitching the journey together themselves."
+        intro="I redesigned flight booking as a single interface that searches hundreds of airlines and travel sites at once, so travellers stop stitching the journey together themselves."
         meta={[
           { label: "Role", value: "UX Designer & Researcher (solo)" },
           { label: "Timeline", value: "Feb – Mar 2026" },
