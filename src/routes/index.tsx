@@ -154,7 +154,7 @@ function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 2 }}
-          className="mt-12 grid gap-8 sm:grid-cols-[1.1fr_1fr] sm:items-end"
+          className="mt-10 grid gap-8 sm:items-end"
         >
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
             I'm <span className="text-foreground">Courtney Reicherter</span> — a UX designer with a
