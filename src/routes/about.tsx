@@ -87,7 +87,7 @@ function AboutPage() {
           <div>
             <p className="label-mono text-clay">About</p>
             <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight sm:text-6xl">
-              <RevealWords text="Designing for how people genuinely think, decide and behave." />
+              <RevealWords text="Designing for how people think, decide and behave." />
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               I'm Courtney — a UX designer and researcher with a psychology background. I specialise
