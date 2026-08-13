@@ -9,10 +9,10 @@ import {
   StatBand,
 } from "@/components/case-study-bits";
 import { Reveal } from "@/components/reveal";
-import protoResults from "@/assets/Screenshot_2026-08-12_202729.png.asset.json";
-import affinity from "@/assets/affinity-diagram.png.asset.json";
-import journey from "@/assets/journey-map.png.asset.json";
-import protoSeats from "@/assets/Screenshot_2026-08-12_202817.png.asset.json";
+const protoResults = { url: "/media/Screenshot_2026-08-12_202729.png" };
+const affinity = { url: "/media/affinity-diagram.png" };
+const journey = { url: "/media/journey-map.png" };
+const protoSeats = { url: "/media/Screenshot_2026-08-12_202817.png" };
 
 export const Route = createFileRoute("/work/flight-booking")({
   head: () => ({

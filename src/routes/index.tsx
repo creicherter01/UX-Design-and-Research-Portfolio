@@ -11,9 +11,9 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Reveal, RevealChars } from "@/components/reveal";
 
 import { EMAIL, LINKEDIN } from "@/components/site-chrome";
-import dawsonAfter from "@/assets/Screenshot_2026-07-09_102408.png.asset.json";
-import flightCover from "@/assets/Screenshot_2026-08-12_202729.png.asset.json";
-import portrait from "@/assets/courtney-portrait.png.asset.json";
+const dawsonAfter = { url: "/media/Screenshot_2026-07-09_102408.png" };
+const flightCover = { url: "/media/Screenshot_2026-08-12_202729.png" };
+const portrait = { url: "/media/courtney-portrait.png" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
