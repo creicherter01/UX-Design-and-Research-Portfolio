@@ -257,7 +257,7 @@ export function OutcomeList({ items }: { items: string[] }) {
   );
 }
 
-export function NextProject({ to, label }: { to: "/work/dawson-motors" | "/work/flight-booking"; label: string }) {
+export function NextProject({ to, label }: { to: "/work/dawson-motors" | "/work/flight-booking" | "/work/reflink-app"; label: string }) {
   return (
     <section className="border-b border-border bg-primary text-primary-foreground">
       <Link to={to} className="group block">
