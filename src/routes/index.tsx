@@ -13,6 +13,7 @@ import { Reveal, RevealChars } from "@/components/reveal";
 import { EMAIL, LINKEDIN } from "@/components/site-chrome";
 const dawsonAfter = { url: "/media/Screenshot_2026-07-09_102408.png" };
 const flightCover = { url: "/media/Screenshot_2026-08-12_202729.png" };
+const reflinkCover = { url: "/media/reflink-hero.png" };
 const portrait = { url: "/media/courtney-portrait.png" };
 
 export const Route = createFileRoute("/")({
@@ -50,7 +51,7 @@ const MARQUEE = [
 ];
 
 const STATS = [
-  { value: "2", label: "Full case studies" },
+  { value: "3", label: "Full case studies" },
   { value: "4", label: "Users interviewed per project" },
   { value: "B.A.", label: "Psychology, Binghamton" },
   { value: "Hi-Fi", label: "Research through to final screens" },
@@ -103,6 +104,16 @@ const PROJECTS = [
     tags: ["UX Research", "Interaction Design", "Prototyping"],
     kind: "UX capstone project",
     image: flightCover.url,
+  },
+  {
+    to: "/work/reflink-app" as const,
+    index: "03",
+    title: "RefLink",
+    blurb:
+      "A mobile-responsive web app that matches youth and minor league sports organizers with qualified referees — designed for both sides of a two-sided marketplace.",
+    tags: ["Mobile UX", "Two-Sided Marketplace", "Prototyping"],
+    kind: "UX capstone / personal project",
+    image: reflinkCover.url,
   },
 ];
 
@@ -378,10 +389,10 @@ function Home() {
           <Reveal>
             <p className="label-mono text-clay">Selected work</p>
             <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight tracking-tight sm:text-5xl">
-              Two projects, start to finish
+              Three projects, start to finish
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              One real client, one capstone — both carried from research and audit through to
+              One real client and two capstones — all carried from research and audit through to
               high-fidelity, interactive prototypes.
             </p>
           </Reveal>
