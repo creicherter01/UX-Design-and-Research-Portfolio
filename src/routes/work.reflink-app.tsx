@@ -18,20 +18,20 @@ const refereeDash = { url: "/media/reflink-referee-dashboard.png" };
 export const Route = createFileRoute("/work/reflink-app")({
   head: () => ({
     meta: [
-      { title: "RefLink — Sports Officiating Marketplace by Courtney Reicherter" },
+      { title: "RefLink — Sports Officiating Marketplace Concept by Courtney Reicherter" },
       {
         name: "description",
         content:
-          "A mobile-responsive web app connecting youth and minor league sports organizers with qualified referees. Case study covers two-sided UX, mobile-first flows and role-based dashboards.",
+          "A mobile-responsive web app concept connecting youth and minor league sports organizers with qualified referees. Case study covers two-sided UX, mobile-first flows and role-based dashboards.",
       },
       {
         property: "og:title",
-        content: "RefLink — Sports Officiating Marketplace by Courtney Reicherter",
+        content: "RefLink — Sports Officiating Marketplace Concept by Courtney Reicherter",
       },
       {
         property: "og:description",
         content:
-          "Mobile-first UX for a two-sided sports officiating marketplace: organizers fill games faster, referees find work that fits their schedule.",
+          "Mobile-first UX concept for a two-sided sports officiating marketplace: organizers fill games faster, referees find work that fits their schedule.",
       },
       { property: "og:image", content: heroDesktop.url },
       { name: "twitter:image", content: heroDesktop.url },
@@ -124,7 +124,7 @@ function ReflinkCase() {
       <CaseHero
         index="03"
         title="RefLink"
-        intro="A mobile-responsive web app that connects youth and minor league sports organizers with qualified referees. I designed the core flows for both sides — posting games and filling them — so the product works as well on a phone between games as it does on a desk at the league office."
+        intro="A mobile-responsive web app concept I designed to connect youth and minor league sports organizers with qualified referees. I explored the core flows for both sides — posting games and filling them — so the product works as well on a phone between games as it does on a desk at the league office."
         meta={[
           { label: "Role", value: "UX Designer & Researcher (solo)" },
           { label: "Timeline", value: "Mar – Apr 2026" },
@@ -163,7 +163,7 @@ function ReflinkCase() {
       <Section
         eyebrow="The challenge"
         title="A two-sided marketplace with a clock ticking"
-        lede="RefLink sits between two busy, mobile user groups. Organizers need to fill games quickly with people they trust. Referees need to find work that fits their schedule without wading through spreadsheets and group chats."
+        lede="I picked this space because both sides are busy and mobile. Organizers need to fill games quickly with people they trust. Referees need to find work that fits their schedule without wading through spreadsheets and group chats."
       >
         <NumberedCards items={PROBLEMS} />
       </Section>
@@ -179,12 +179,12 @@ function ReflinkCase() {
 
       <Section
         eyebrow="By the numbers"
-        title="What the product is aiming for"
-        lede="These figures come from the RefLink product team and shaped the design targets I used to judge density, hierarchy and flow decisions."
+        title="What I aimed for with this concept"
+        lede="These are design targets I set to judge density, hierarchy and flow decisions — not measured outcomes from a real product."
       >
         <StatBand
           items={STATS}
-          note="Figures provided by the RefLink product team as targets and context, not measured outcomes from my own sessions."
+          note="Hypothetical targets used as constraints while designing, not validated metrics."
         />
       </Section>
 
@@ -226,8 +226,8 @@ function ReflinkCase() {
 
       <Section
         eyebrow="The result"
-        title="What the final design delivers"
-        lede="A responsive, two-sided product where organizers can fill a game in minutes and referees can manage their whole schedule from a phone."
+        title="What the final prototype delivers"
+        lede="A responsive, two-sided prototype where organizers can fill a game in minutes and referees can manage their whole schedule from a phone."
       >
         <OutcomeList items={OUTCOMES} />
         <Reveal delay={0.1} className="mt-10 rounded-lg border border-border bg-card p-7">
