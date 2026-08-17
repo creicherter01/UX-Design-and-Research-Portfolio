@@ -95,7 +95,7 @@ const STATS = [
   {
     value: "18 min",
     label: "Average time to fill an open game",
-    sub: "Target benchmark from the product team",
+    sub: "Hypothetical target benchmark for the concept",
   },
   {
     value: "96%",
