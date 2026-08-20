@@ -172,7 +172,7 @@ function ReflinkCase() {
       <Section
         eyebrow="My approach"
         title="Mobile-first, role-second"
-        lede="I started with the referee's phone. If an official can browse, accept and manage a game while walking to the field, the desktop experience only gets better. From there I split the interface by role without duplicating the underlying game data."
+        lede="I started with the referee's phone. If an official can browse, accept and manage a game while walking to the field, the rest of the flow falls into place. From there I split the interface by role without duplicating the underlying game data."
         tone="muted"
       >
         <FindingRows items={FINDINGS} leftLabel="Research finding" rightLabel="Design solution" />
