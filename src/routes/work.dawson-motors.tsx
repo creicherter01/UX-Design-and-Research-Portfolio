@@ -159,7 +159,7 @@ function DawsonCase() {
         tone="muted"
       >
         <EmbedBoard
-          src="https://miro.com/app/live-embed/uXjVHvh3OLk=/?embedAutoplay=true&embedMode=view_only"
+          src="https://miro.com/app/live-embed/uXjVHvh3OLk=/?embedAutoplay=true&embedMode=view_only&moveToViewport=1200,-1300,7000,4500"
           title="Dawson Motors redesign — Miro working board"
           caption="Drag to pan, scroll to zoom, or open it full screen. View-only."
           href="https://miro.com/app/board/uXjVHvh3OLk=/?share_link_id=931729459358"
