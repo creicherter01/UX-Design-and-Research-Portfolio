@@ -238,7 +238,7 @@ function FlightCase() {
         lede="Interview notes, affinity clusters and the journey map that came out of them — live in the page, so you can pan and zoom the actual working board instead of a screenshot."
       >
         <EmbedBoard
-          src="https://miro.com/app/live-embed/uXjVJmqObNk=/?embedAutoplay=false&embedMode=view_only"
+          src="https://miro.com/app/live-embed/uXjVJmqObNk=/?embedAutoplay=true&embedMode=view_only"
           title="Flight booking research — Miro working board"
           caption="Drag to pan, scroll to zoom, or open it full screen. View-only."
           href="https://miro.com/app/board/uXjVJmqObNk=/?share_link_id=991945260277"
