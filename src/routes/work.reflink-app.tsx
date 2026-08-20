@@ -111,7 +111,7 @@ const STATS = [
 ];
 
 const OUTCOMES = [
-  "Mobile-first responsive design so referees can manage games from any device",
+  "Mobile-first design so referees can manage games from their phone",
   "Two role-based dashboards built from opposite user mental models",
   "One-tap accept/decline with smart filters for sport, distance and pay",
   "Verified badges and ratings surfaced on every assignment row",
