@@ -190,26 +190,13 @@ function ReflinkCase() {
       </Section>
 
       <Section
-        eyebrow="Responsive design"
+        eyebrow="Mobile prototype"
         title="Built for the device referees actually carry"
-        lede="The same marketing page and dashboard scale from a league-office monitor down to a phone pulled out of a gear bag."
+        lede="The prototype is designed as a phone-first experience — referees browse, accept and manage games from the device already in their gear bag."
         tone="muted"
       >
-        <div className="grid gap-4 sm:grid-cols-[1.4fr_0.6fr]">
+        <div className="mx-auto max-w-sm">
           <Reveal>
-            <figure className="overflow-hidden rounded-lg border border-border bg-card">
-              <img
-                src={heroDesktop.url}
-                alt="RefLink marketing page on desktop"
-                loading="lazy"
-                className="w-full"
-              />
-              <figcaption className="label-mono border-t border-border p-3 text-muted-foreground">
-                Desktop view — hero, stats and primary CTA.
-              </figcaption>
-            </figure>
-          </Reveal>
-          <Reveal delay={0.08}>
             <PhoneFrame caption="Live prototype — scroll and tap inside the phone.">
               <iframe
                 src="https://reflinkappbuild.netlify.app/"
