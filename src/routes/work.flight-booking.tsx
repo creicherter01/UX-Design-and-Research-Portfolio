@@ -7,6 +7,7 @@ import {
   OutcomeList,
   Section,
   StatBand,
+  ThoughtProcess,
 } from "@/components/case-study-bits";
 import { Reveal } from "@/components/reveal";
 const protoResults = { url: "/media/Screenshot_2026-08-12_202729.png" };
