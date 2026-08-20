@@ -47,7 +47,7 @@ const STATS = [
   { value: "3", label: "Full case studies" },
   { value: "End-to-end", label: "Research through final screens" },
   { value: "B.A.", label: "Psychology, Binghamton" },
-  { value: "Hi-Fi", label: "Research through to final screens" },
+  { value: "Hi-Fi", label: "High-fidelity prototypes" },
 ];
 
 const PERSONAL = [
