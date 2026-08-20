@@ -227,6 +227,7 @@ function ReflinkCase() {
       </Section>
 
       <Section
+        id="prototype"
         eyebrow="Mobile prototype"
         title="Built for the device referees actually carry"
         lede="The prototype is designed as a phone-first experience — referees browse, accept and manage games from the device already in their gear bag."
