@@ -178,6 +178,20 @@ function DawsonCase() {
       />
 
       <Section
+        eyebrow="Thinking it through"
+        title="How I worked the problem"
+        lede="This is the board I actually worked on while auditing the site — findings, notes to myself and the layout thinking behind each screen. Pan and zoom it right here; the reasoning matters more than the tidy final screens."
+        tone="muted"
+      >
+        <EmbedBoard
+          src="https://miro.com/app/live-embed/uXjVHvh3OLk=/?embedAutoplay=false"
+          title="Dawson Motors redesign — Miro working board"
+          caption="Drag to pan, scroll to zoom, or open it full screen."
+          href="https://miro.com/app/board/uXjVHvh3OLk=/?share_link_id=931729459358"
+        />
+      </Section>
+
+      <Section
         eyebrow="The challenge"
         title="A two-sided business with a one-sided site"
         lede="Dawson Motors is both a pre-owned car lot and a full-service repair shop, but the existing site treated both as an afterthought. Flat grey navigation, a cramped inventory carousel and a dated “click here to text us” graphic gave visitors no sense of the business behind them — and for a shop built on 40+ years of local trust, the site was actively working against that reputation."
