@@ -325,6 +325,26 @@ function Home() {
       <Hero />
       <Marquee />
 
+      <section id="work" className="scroll-mt-20 border-b border-border">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <Reveal>
+            <p className="label-mono text-clay">Selected work</p>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight tracking-tight sm:text-5xl">
+              Three projects, start to finish
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              One real client and two capstones — all carried from research and audit through to
+              high-fidelity, interactive prototypes.
+            </p>
+          </Reveal>
+          <div className="mt-12 space-y-6">
+            {PROJECTS.map((p, i) => (
+              <ProjectCard key={p.to} project={p} i={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <Reveal>
@@ -353,26 +373,6 @@ function Home() {
         </div>
       </section>
 
-
-      <section id="work" className="scroll-mt-20 border-b border-border">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
-          <Reveal>
-            <p className="label-mono text-clay">Selected work</p>
-            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight tracking-tight sm:text-5xl">
-              Three projects, start to finish
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              One real client and two capstones — all carried from research and audit through to
-              high-fidelity, interactive prototypes.
-            </p>
-          </Reveal>
-          <div className="mt-12 space-y-6">
-            {PROJECTS.map((p, i) => (
-              <ProjectCard key={p.to} project={p} i={i} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="border-b border-border bg-secondary/30">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:grid-cols-[1fr_1.1fr] sm:px-8">
