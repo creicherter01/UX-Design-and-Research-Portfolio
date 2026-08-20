@@ -1,14 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  useScroll,
-  useTransform,
-} from "motion/react";
-import { useRef } from "react";
+import { motion } from "motion/react";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
-import { Reveal, RevealChars } from "@/components/reveal";
+import { Reveal } from "@/components/reveal";
 
 import { EMAIL, LINKEDIN } from "@/components/site-chrome";
 const dawsonAfter = { url: "/media/Screenshot_2026-07-09_102408.png" };
