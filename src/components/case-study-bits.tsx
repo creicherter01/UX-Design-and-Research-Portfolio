@@ -234,7 +234,7 @@ function AnimatedStat({ value }: { value: string }) {
       duration: 1.1,
       ease: "easeOut",
       onUpdate: (v) => {
-        node.textContent = `${match[1]}${v.toFixed(decimals)}${match[3]}`;
+        node.textContent = `${prefix}${v.toFixed(decimals)}${suffix}`;
       },
     });
     return () => controls.stop();
