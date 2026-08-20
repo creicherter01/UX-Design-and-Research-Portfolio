@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   BeforeAfter,
   CaseHero,
+  EmbedBoard,
   FindingRows,
   NextProject,
   NumberedCards,
