@@ -9,6 +9,7 @@ import {
   OutcomeList,
   Section,
   StatBand,
+  ThoughtProcess,
 } from "@/components/case-study-bits";
 
 import { Reveal } from "@/components/reveal";
