@@ -89,24 +89,19 @@ const FINDINGS = [
 
 const STATS = [
   {
-    value: "1,400+",
-    label: "Officials in the network",
-    sub: "Design target: make scale feel manageable for organizers",
-  },
-  {
-    value: "18 min",
-    label: "Average time to fill an open game",
-    sub: "Hypothetical target benchmark for the concept",
-  },
-  {
-    value: "96%",
-    label: "Game coverage rate",
-    sub: "Target outcome for the organizer dashboard",
-  },
-  {
     value: "4",
     label: "Users interviewed across both roles",
     sub: "2 organizers, 2 referees",
+  },
+  {
+    value: "2",
+    label: "Role-based dashboards designed from opposite mental models",
+    sub: "Organizer and referee",
+  },
+  {
+    value: "1 tap",
+    label: "To accept or decline a game invite",
+    sub: "Core interaction the flow is built around",
   },
 ];
 
