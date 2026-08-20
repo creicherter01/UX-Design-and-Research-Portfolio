@@ -133,11 +133,11 @@ function ReflinkCase() {
         intro="A mobile app concept I designed to connect youth and minor league sports organizers with qualified referees. I explored the core flows for both sides — posting games and filling them — so the product works on the device referees actually carry: their phone."
         meta={[
           { label: "Role", value: "UX Designer & Researcher (solo)" },
-          { label: "Timeline", value: "Mar – Apr 2026" },
+          { label: "Timeline", value: "Aug 2026" },
           { label: "Tools", value: "Figma" },
           { label: "Type", value: "Personal project" },
         ]}
-        prototype="/work/reflink-app/prototype"
+        prototype="/work/reflink-prototype"
       />
 
       <section className="border-b border-border">

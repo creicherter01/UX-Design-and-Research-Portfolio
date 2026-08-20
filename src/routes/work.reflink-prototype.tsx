@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PhoneFrame } from "@/components/case-study-bits";
 import { ArrowLeft } from "lucide-react";
 
-export const Route = createFileRoute("/work/reflink-app/prototype")({
+export const Route = createFileRoute("/work/reflink-prototype")({
   head: () => ({
     meta: [
       { title: "RefLink Prototype — Courtney Reicherter" },
