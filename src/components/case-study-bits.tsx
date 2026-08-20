@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { motion } from "motion/react";
-import { useState } from "react";
+import { animate, motion, useInView } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Reveal, RevealWords } from "./reveal";
 
@@ -43,9 +43,10 @@ export function CaseHero({
             href={prototype}
             target="_blank"
             rel="noreferrer"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
+            className="group mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"
           >
-            View interactive prototype <ArrowUpRight className="h-4 w-4" />
+            View interactive prototype
+            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         )}
       </div>
@@ -101,13 +102,18 @@ export function NumberedCards({
     <div className="grid gap-4 sm:grid-cols-2">
       {items.map((item, i) => (
         <Reveal key={item.title} delay={i * 0.07}>
-          <article className="group h-full rounded-lg border border-border bg-card p-6 transition-colors duration-300 hover:border-sage-deep">
-            <span className="label-mono text-sage-deep">
+          <motion.article
+            whileHover={{ y: -5 }}
+            transition={{ type: "spring", stiffness: 280, damping: 22 }}
+            className="group relative h-full overflow-hidden rounded-lg border border-border bg-card p-6 transition-colors duration-300 hover:border-sage-deep hover:shadow-md"
+          >
+            <span className="absolute left-0 top-0 h-full w-[3px] origin-top scale-y-0 bg-clay transition-transform duration-400 ease-out group-hover:scale-y-100" />
+            <span className="label-mono inline-block text-sage-deep transition-transform duration-300 group-hover:-translate-y-0.5">
               {String(i + 1).padStart(2, "0")}
             </span>
             <h3 className="mt-3 font-display text-xl leading-snug">{item.title}</h3>
             <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
-          </article>
+          </motion.article>
         </Reveal>
       ))}
     </div>
@@ -127,14 +133,14 @@ export function FindingRows({
     <div className="divide-y divide-border border-y border-border">
       {items.map((item, i) => (
         <Reveal key={item.finding} delay={i * 0.05}>
-          <div className="grid gap-5 py-7 sm:grid-cols-2 sm:gap-10">
+          <div className="group grid gap-5 rounded-md px-2 py-7 transition-colors duration-300 hover:bg-secondary/50 sm:grid-cols-2 sm:gap-10 sm:px-4">
             <div>
-              <p className="label-mono text-muted-foreground">
+              <p className="label-mono text-muted-foreground transition-colors duration-300 group-hover:text-clay">
                 {String(i + 1).padStart(2, "0")} · {leftLabel}
               </p>
               <p className="mt-2 text-sm leading-relaxed">{item.finding}</p>
             </div>
-            <div className="border-l-2 border-clay/40 pl-5">
+            <div className="border-l-2 border-clay/40 pl-5 transition-all duration-300 group-hover:border-clay group-hover:pl-6">
               <p className="label-mono text-clay">{rightLabel}</p>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {item.solution}
@@ -176,7 +182,7 @@ export function BeforeAfter({
               key={k}
               type="button"
               onClick={() => setView(k)}
-              className={`label-mono relative rounded-full px-4 py-1.5 transition-colors ${
+              className={`label-mono relative rounded-full px-4 py-1.5 transition-colors active:scale-95 ${
                 view === k ? "text-primary-foreground" : "text-muted-foreground"
               }`}
             >
@@ -193,7 +199,7 @@ export function BeforeAfter({
         </div>
       </div>
       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{note}</p>
-      <div className="mt-5 overflow-hidden rounded-md border border-border bg-secondary/40">
+      <div className="group mt-5 overflow-hidden rounded-md border border-border bg-secondary/40">
         <motion.img
           key={src}
           src={src}
@@ -202,12 +208,36 @@ export function BeforeAfter({
           initial={{ opacity: 0, scale: 1.01 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
-          className="w-full"
+          className="w-full transition-transform duration-[900ms] ease-out group-hover:scale-[1.03]"
         />
       </div>
       <p className="label-mono mt-3 text-muted-foreground">{caption}</p>
     </Reveal>
   );
+}
+
+function AnimatedStat({ value }: { value: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-20% 0px" });
+  const match = value.match(/^([^0-9.-]*)(-?[\d.,]+)(.*)$/);
+
+  useEffect(() => {
+    if (!inView || !match || !ref.current) return;
+    const node = ref.current;
+    const target = Number(match[2].replace(/,/g, ""));
+    if (!Number.isFinite(target)) return;
+    const decimals = match[2].includes(".") ? match[2].split(".")[1].length : 0;
+    const controls = animate(0, target, {
+      duration: 1.1,
+      ease: "easeOut",
+      onUpdate: (v) => {
+        node.textContent = `${match[1]}${v.toFixed(decimals)}${match[3]}`;
+      },
+    });
+    return () => controls.stop();
+  }, [inView, match]);
+
+  return <span ref={ref}>{value}</span>;
 }
 
 export function StatBand({
@@ -222,15 +252,19 @@ export function StatBand({
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.07}>
-            <div className="h-full rounded-lg border border-border bg-card p-6">
+            <motion.div
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 280, damping: 22 }}
+              className="h-full rounded-lg border border-border bg-card p-6 transition-colors duration-300 hover:border-sage-deep hover:shadow-md"
+            >
               <p className="font-display text-4xl leading-none tracking-tight text-sage-deep">
-                {s.value}
+                <AnimatedStat value={s.value} />
               </p>
               <p className="mt-3 text-sm leading-snug">{s.label}</p>
               {s.sub && (
                 <p className="label-mono mt-2 text-muted-foreground">{s.sub}</p>
               )}
-            </div>
+            </motion.div>
           </Reveal>
         ))}
       </div>
@@ -247,8 +281,8 @@ export function OutcomeList({ items }: { items: string[] }) {
     <ul className="grid gap-3 sm:grid-cols-2">
       {items.map((item, i) => (
         <Reveal key={item} delay={i * 0.04}>
-          <li className="flex gap-3 rounded-md bg-secondary/50 p-4 text-sm leading-relaxed">
-            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-clay" />
+          <li className="group flex gap-3 rounded-md bg-secondary/50 p-4 text-sm leading-relaxed transition-all duration-300 hover:translate-x-1 hover:bg-secondary">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-clay transition-transform duration-300 group-hover:scale-[1.9]" />
             {item}
           </li>
         </Reveal>
