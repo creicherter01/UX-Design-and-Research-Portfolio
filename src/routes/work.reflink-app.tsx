@@ -209,17 +209,14 @@ function ReflinkCase() {
             </figure>
           </Reveal>
           <Reveal delay={0.08}>
-            <figure className="overflow-hidden rounded-lg border border-border bg-card">
-              <img
-                src={heroMobile.url}
-                alt="RefLink marketing page on mobile"
+            <PhoneFrame caption="Live prototype — scroll and tap inside the phone.">
+              <iframe
+                src="https://reflinkappbuild.netlify.app/"
+                title="RefLink interactive prototype"
                 loading="lazy"
-                className="w-full"
+                className="h-full w-full border-0"
               />
-              <figcaption className="label-mono border-t border-border p-3 text-muted-foreground">
-                Mobile view — the same content reflowed for one-handed use.
-              </figcaption>
-            </figure>
+            </PhoneFrame>
           </Reveal>
         </div>
       </Section>
