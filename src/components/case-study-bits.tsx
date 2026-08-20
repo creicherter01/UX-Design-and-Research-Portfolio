@@ -257,6 +257,32 @@ export function OutcomeList({ items }: { items: string[] }) {
   );
 }
 
+export function PhoneFrame({
+  children,
+  caption,
+  className,
+}: {
+  children: React.ReactNode;
+  caption?: string;
+  className?: string;
+}) {
+  return (
+    <div className={className}>
+      <div className="mx-auto w-full max-w-[320px]">
+        <div className="relative rounded-[2.6rem] border border-border bg-primary p-[10px] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]">
+          <div className="absolute left-1/2 top-[14px] z-10 h-[6px] w-[76px] -translate-x-1/2 rounded-full bg-background/25" />
+          <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.1rem] bg-secondary">
+            {children}
+          </div>
+        </div>
+      </div>
+      {caption && (
+        <p className="label-mono mt-4 text-center text-muted-foreground">{caption}</p>
+      )}
+    </div>
+  );
+}
+
 export function NextProject({ to, label }: { to: "/work/dawson-motors" | "/work/flight-booking" | "/work/reflink-app"; label: string }) {
   return (
     <section className="border-b border-border bg-primary text-primary-foreground">
