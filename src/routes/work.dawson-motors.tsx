@@ -65,7 +65,51 @@ const PROBLEMS = [
   },
 ];
 
+const PROCESS = [
+  {
+    phase: "01",
+    title: "Audited the live site before touching design",
+    did: "I walked the existing site the way a first-time visitor would, screen by screen, and logged every friction point against Nielsen's usability heuristics on my Miro board.",
+    why: "This was a real business, not a made-up brief. I wanted my recommendations tied to something I could point at and defend, instead of my own taste.",
+  },
+  {
+    phase: "02",
+    title: "Talked to the owners about where the business was going",
+    did: "I asked what they actually wanted to grow. They told me pre-owned sales was the priority, but service kept the lights on and regulars needed to reach it fast.",
+    why: "The hierarchy of a homepage is a business decision as much as a design one. Guessing would have meant designing for the wrong goal.",
+  },
+  {
+    phase: "03",
+    title: "Split the homepage by intent",
+    did: "I gave sales and service two distinct primary paths instead of one grey row of buttons, with sales leading visually and service one tap away.",
+    why: "Buying a car and booking a repair are different mindsets. Making people share a path meant both groups did extra work to get anywhere.",
+  },
+  {
+    phase: "04",
+    title: "Pulled the trust story above the fold",
+    did: "I moved the 40-year history, Carfax rating and NAPA AutoCare status into the first screen alongside the hero.",
+    why: "Their reputation was the strongest thing they had and the old site hid it. Trust is what makes someone hand over their car keys or their money.",
+  },
+  {
+    phase: "05",
+    title: "Rebuilt contact around what people are asking for",
+    did: "I added an \"I'm interested in\" selector and surfaced call and text numbers directly, rather than routing every inquiry through one generic form.",
+    why: "A single form made the visitor figure out the routing. Sorting by intent up front is less thinking for them and cleaner handoffs for the shop.",
+  },
+];
+
+
+const OUTCOMES = [
+  "Sales and service now have separate, clearly labeled paths from the homepage, so neither audience has to read past the other.",
+  "The shop's 40-year history, Carfax rating and NAPA AutoCare status sit in the first screen instead of buried on an interior page.",
+  "Contact is sorted by intent, with call and text options for anyone who doesn't want to fill out a form at all.",
+  "The layout works on a phone, which is where most people look up a repair shop in the first place.",
+  "Every recommendation is traceable to a specific line in my audit, so I can explain any decision to the owners.",
+  "Biggest lesson: asking the owners where the business was headed changed the hierarchy more than any heuristic did.",
+];
+
 const FINDINGS = [
+
   {
     finding:
       "Weak visual hierarchy — every nav item, badge and CTA carried the same weight, so nothing told a first-time visitor where to look.",
