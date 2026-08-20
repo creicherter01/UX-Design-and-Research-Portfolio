@@ -110,7 +110,7 @@ const PROJECTS = [
     index: "03",
     title: "RefLink",
     blurb:
-      "A mobile-responsive web app concept that matches youth and minor league sports organizers with qualified referees — designed for both sides of a two-sided marketplace.",
+      "A mobile app concept that matches youth and minor league sports organizers with qualified referees — designed for both sides of a two-sided marketplace.",
     tags: ["Mobile UX", "Two-Sided Marketplace", "Prototyping"],
     kind: "UX capstone / personal project",
     image: reflinkCover.url,

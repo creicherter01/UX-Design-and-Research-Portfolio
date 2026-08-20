@@ -23,7 +23,7 @@ export const Route = createFileRoute("/work/reflink-app")({
       {
         name: "description",
         content:
-          "A mobile-responsive web app concept connecting youth and minor league sports organizers with qualified referees. Case study covers two-sided UX, mobile-first flows and role-based dashboards.",
+          "A mobile app concept connecting youth and minor league sports organizers with qualified referees. Case study covers two-sided UX, mobile-first flows and role-based dashboards.",
       },
       {
         property: "og:title",
@@ -111,7 +111,7 @@ const STATS = [
 ];
 
 const OUTCOMES = [
-  "Mobile-first responsive design so referees can manage games from any device",
+  "Mobile-first design so referees can manage games from their phone",
   "Two role-based dashboards built from opposite user mental models",
   "One-tap accept/decline with smart filters for sport, distance and pay",
   "Verified badges and ratings surfaced on every assignment row",
@@ -125,7 +125,7 @@ function ReflinkCase() {
       <CaseHero
         index="03"
         title="RefLink"
-        intro="A mobile-responsive web app concept I designed to connect youth and minor league sports organizers with qualified referees. I explored the core flows for both sides — posting games and filling them — so the product works as well on a phone between games as it does on a desk at the league office."
+        intro="A mobile app concept I designed to connect youth and minor league sports organizers with qualified referees. I explored the core flows for both sides — posting games and filling them — so the product works on the device referees actually carry: their phone."
         meta={[
           { label: "Role", value: "UX Designer & Researcher (solo)" },
           { label: "Timeline", value: "Mar – Apr 2026" },
@@ -172,7 +172,7 @@ function ReflinkCase() {
       <Section
         eyebrow="My approach"
         title="Mobile-first, role-second"
-        lede="I started with the referee's phone. If an official can browse, accept and manage a game while walking to the field, the desktop experience only gets better. From there I split the interface by role without duplicating the underlying game data."
+        lede="I started with the referee's phone. If an official can browse, accept and manage a game while walking to the field, the rest of the flow falls into place. From there I split the interface by role without duplicating the underlying game data."
         tone="muted"
       >
         <FindingRows items={FINDINGS} leftLabel="Research finding" rightLabel="Design solution" />
@@ -190,26 +190,13 @@ function ReflinkCase() {
       </Section>
 
       <Section
-        eyebrow="Responsive design"
+        eyebrow="Mobile prototype"
         title="Built for the device referees actually carry"
-        lede="The same marketing page and dashboard scale from a league-office monitor down to a phone pulled out of a gear bag."
+        lede="The prototype is designed as a phone-first experience — referees browse, accept and manage games from the device already in their gear bag."
         tone="muted"
       >
-        <div className="grid gap-4 sm:grid-cols-[1.4fr_0.6fr]">
+        <div className="mx-auto max-w-sm">
           <Reveal>
-            <figure className="overflow-hidden rounded-lg border border-border bg-card">
-              <img
-                src={heroDesktop.url}
-                alt="RefLink marketing page on desktop"
-                loading="lazy"
-                className="w-full"
-              />
-              <figcaption className="label-mono border-t border-border p-3 text-muted-foreground">
-                Desktop view — hero, stats and primary CTA.
-              </figcaption>
-            </figure>
-          </Reveal>
-          <Reveal delay={0.08}>
             <PhoneFrame caption="Live prototype — scroll and tap inside the phone.">
               <iframe
                 src="https://reflinkappbuild.netlify.app/"
@@ -225,7 +212,7 @@ function ReflinkCase() {
       <Section
         eyebrow="The result"
         title="What the final prototype delivers"
-        lede="A responsive, two-sided prototype where organizers can fill a game in minutes and referees can manage their whole schedule from a phone."
+        lede="A two-sided mobile prototype where organizers can fill a game in minutes and referees can manage their whole schedule from a phone."
       >
         <OutcomeList items={OUTCOMES} />
         <Reveal delay={0.1} className="mt-10 rounded-lg border border-border bg-card p-7">
