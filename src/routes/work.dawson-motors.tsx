@@ -93,21 +93,6 @@ const FINDINGS = [
 
 const AUDIT_STATS = [
   {
-    value: "6",
-    label: "Pages reviewed against Nielsen's usability heuristics",
-    sub: "Heuristic audit of the original site",
-  },
-  {
-    value: "4 → 1",
-    label: "Clicks from landing to booking a service",
-    sub: "Task-flow reduction",
-  },
-  {
-    value: "11 → 5",
-    label: "Competing top-level navigation choices",
-    sub: "Information architecture",
-  },
-  {
     value: "0 → 3",
     label: "Trust signals visible above the fold",
     sub: "40+ years, Carfax rating, NAPA AutoCare",
@@ -187,7 +172,7 @@ function DawsonCase() {
       >
         <StatBand
           items={AUDIT_STATS}
-          note="Counted by me across the original site and the rebuilt prototype (heuristic audit and click-path comparison, June 2025). No live analytics were available on the original site, so these are structural counts rather than performance results."
+          note="Counted by comparing the original site and the rebuilt prototype. No live analytics were available, so this is a structural count rather than a performance result."
         />
         <div className="mt-14">
           <p className="label-mono text-clay">Why it mattered</p>

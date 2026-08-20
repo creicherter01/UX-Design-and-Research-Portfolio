@@ -7,7 +7,6 @@ import {
   OutcomeList,
   PhoneFrame,
   Section,
-  StatBand,
 } from "@/components/case-study-bits";
 import { Reveal } from "@/components/reveal";
 
@@ -87,28 +86,11 @@ const FINDINGS = [
   },
 ];
 
-const STATS = [
-  {
-    value: "4",
-    label: "Users interviewed across both roles",
-    sub: "2 organizers, 2 referees",
-  },
-  {
-    value: "2",
-    label: "Role-based dashboards designed from opposite mental models",
-    sub: "Organizer and referee",
-  },
-  {
-    value: "1 tap",
-    label: "To accept or decline a game invite",
-    sub: "Core interaction the flow is built around",
-  },
-];
 
 const OUTCOMES = [
   "Mobile-first design so referees can manage games from their phone",
-  "Two role-based dashboards built from opposite user mental models",
-  "One-tap accept/decline with smart filters for sport, distance and pay",
+  "Role-based dashboards for organizers and referees, built from opposite mental models",
+  "Tap to accept or decline, with smart filters for sport, distance and pay",
   "Verified badges and ratings surfaced on every assignment row",
   "Shared availability calendar that prevents double-booking",
   "Instant game invites that match officials to slots that fit their schedule",
@@ -176,12 +158,36 @@ function ReflinkCase() {
       <Section
         eyebrow="Scope"
         title="What this concept covered"
-        lede="RefLink is a self-directed concept, so there are no usage numbers behind it. These are the counts from my research and what I actually designed."
+        lede="RefLink is a self-directed concept, so there are no usage numbers behind it. I focused on the core flows for both sides of the marketplace and the interactions that would matter most if the idea were built."
+        tone="muted"
       >
-        <StatBand
-          items={STATS}
-          note="Counts from my own interviews and the screens I designed. No live product or usage data exists for this concept."
-        />
+        <div className="grid gap-4 sm:grid-cols-2">
+          {[
+            {
+              title: "Organizer flow",
+              body: "Post games, track fill status and see assigned officials at a glance.",
+            },
+            {
+              title: "Referee flow",
+              body: "Browse open games, accept or decline invites and manage a personal schedule.",
+            },
+            {
+              title: "Trust surface",
+              body: "Verified badges, ratings and certification levels on profiles and assignment rows.",
+            },
+            {
+              title: "Mobile-first prototype",
+              body: "Built as a phone-native experience so referees could manage games from the device already in their bag.",
+            },
+          ].map((item, i) => (
+            <Reveal key={item.title} delay={i * 0.07}>
+              <article className="h-full rounded-lg border border-border bg-card p-6">
+                <h3 className="font-display text-xl">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
       </Section>
 
       <Section
