@@ -174,13 +174,13 @@ function ReflinkCase() {
       </Section>
 
       <Section
-        eyebrow="By the numbers"
-        title="What I aimed for with this concept"
-        lede="These are design targets I set to judge density, hierarchy and flow decisions — not measured outcomes from a real product."
+        eyebrow="Scope"
+        title="What this concept covered"
+        lede="RefLink is a self-directed concept, so there are no usage numbers behind it. These are the counts from my research and what I actually designed."
       >
         <StatBand
           items={STATS}
-          note="Hypothetical targets used as constraints while designing, not validated metrics."
+          note="Counts from my own interviews and the screens I designed. No live product or usage data exists for this concept."
         />
       </Section>
 
