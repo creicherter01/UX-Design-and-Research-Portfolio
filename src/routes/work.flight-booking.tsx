@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   CaseHero,
+  EmbedBoard,
   FindingRows,
   NextProject,
   NumberedCards,
@@ -230,6 +231,19 @@ function FlightCase() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Thinking it through"
+        title="The board where I worked this out"
+        lede="Interview notes, affinity clusters and the journey map that came out of them — live in the page, so you can pan and zoom the actual working board instead of a screenshot."
+      >
+        <EmbedBoard
+          src="https://miro.com/app/live-embed/uXjVJmqObNk=/?embedAutoplay=false"
+          title="Flight booking research — Miro working board"
+          caption="Drag to pan, scroll to zoom, or open it full screen."
+          href="https://miro.com/app/board/uXjVJmqObNk=/?share_link_id=991945260277"
+        />
+      </Section>
 
       <Section
         eyebrow="By the numbers"
