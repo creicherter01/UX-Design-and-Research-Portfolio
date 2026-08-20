@@ -40,7 +40,7 @@ const MARQUEE = [
   "Design systems",
   "Hi-fi prototyping",
   "Heuristic audits",
-  "Behavioural science",
+  "Behavioral science",
 ];
 
 const STATS = [
