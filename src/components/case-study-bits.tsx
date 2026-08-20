@@ -10,13 +10,22 @@ export function CaseHero({
   intro,
   meta,
   prototype,
+  prototypeAnchor,
 }: {
   index: string;
   title: string;
   intro: string;
   meta: { label: string; value: string }[];
   prototype?: string;
+  prototypeAnchor?: string;
 }) {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!prototypeAnchor) return;
+    e.preventDefault();
+    const el = document.querySelector(prototypeAnchor);
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section className="paper-grain border-b border-border bg-secondary/30">
       <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
@@ -43,6 +52,17 @@ export function CaseHero({
             href={prototype}
             target="_blank"
             rel="noreferrer"
+            className="group mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"
+          >
+            View interactive prototype
+            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+        )}
+
+        {prototypeAnchor && (
+          <a
+            href={prototypeAnchor}
+            onClick={handleScroll}
             className="group mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"
           >
             View interactive prototype
