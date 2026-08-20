@@ -99,7 +99,17 @@ const PROCESS = [
 ];
 
 
+const OUTCOMES = [
+  "Sales and service now have separate, clearly labeled paths from the homepage, so neither audience has to read past the other.",
+  "The shop's 40-year history, Carfax rating and NAPA AutoCare status sit in the first screen instead of buried on an interior page.",
+  "Contact is sorted by intent, with call and text options for anyone who doesn't want to fill out a form at all.",
+  "The layout works on a phone, which is where most people look up a repair shop in the first place.",
+  "Every recommendation is traceable to a specific line in my audit, so I can explain any decision to the owners.",
+  "Biggest lesson: asking the owners where the business was headed changed the hierarchy more than any heuristic did.",
+];
+
 const FINDINGS = [
+
   {
     finding:
       "Weak visual hierarchy — every nav item, badge and CTA carried the same weight, so nothing told a first-time visitor where to look.",
