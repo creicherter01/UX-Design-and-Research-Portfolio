@@ -30,13 +30,13 @@ const JOURNEY = [
     step: "01",
     kicker: "The starting point",
     title: "A psychology degree and an open question",
-    body: "After graduating with my degree in psychology, I found myself at a crossroads. I've always been drawn to understanding people and their behaviour, but traditional psychology career paths didn't resonate. I wanted to apply that understanding somewhere it could shape how people actually live and work.",
+    body: "After graduating with my degree in psychology, I found myself at a crossroads. I've always been drawn to understanding people and their behavior, but traditional psychology career paths didn't resonate. I wanted to apply that understanding somewhere it could shape how people actually live and work.",
   },
   {
     step: "02",
     kicker: "The discovery",
     title: "Where psychology and technology intersect",
-    body: "My research led me to UX — a field where behavioural science and technology meet. Understanding motivations, mental models and pain points is the heart of building meaningful digital experiences. That realisation sparked the whole practice.",
+    body: "My research led me to UX — a field where behavioral science and technology meet. Understanding motivations, mental models and pain points is the heart of building meaningful digital experiences. That realization sparked the whole practice.",
   },
   {
     step: "03",

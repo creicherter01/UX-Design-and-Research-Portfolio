@@ -61,7 +61,7 @@ const PAINS = [
     finding:
       "Confusion between departure and return flights — people frequently didn't know which leg they were booking, which led to mistakes and backtracking.",
     solution:
-      "Clear visual separation with prominent headers, distinct colour coding, and a progress indicator showing which leg is in play.",
+      "Clear visual separation with prominent headers, distinct color coding, and a progress indicator showing which leg is in play.",
   },
   {
     finding:
@@ -73,7 +73,7 @@ const PAINS = [
     finding:
       "Poor flight-detail highlighting — duration, stops and arrival time were buried or easy to miss when scanning results.",
     solution:
-      "Redesigned flight cards with a strong hierarchy: larger type, strategic colour and icons carrying the key details at the top of each card.",
+      "Redesigned flight cards with a strong hierarchy: larger type, strategic color and icons carrying the key details at the top of each card.",
   },
   {
     finding:
@@ -274,7 +274,7 @@ function FlightCase() {
               },
               {
                 src: journey.url,
-                cap: "Journey map — five stages from date and airport selection to payment, with context, goals, behaviours, pain points and the emotional curve.",
+                cap: "Journey map — five stages from date and airport selection to payment, with context, goals, behaviors, pain points and the emotional curve.",
               },
             ].map((it) => (
               <figure key={it.src} className="overflow-hidden rounded-lg border border-border bg-card">

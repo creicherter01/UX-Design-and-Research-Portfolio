@@ -230,10 +230,10 @@ function DawsonCase() {
           />
           <BeforeAfter
             title="Service & repair"
-            note="Service is the shop's highest-intent page, but the original opened with centred paragraphs and vendor logos. The redesign states the offer, then makes booking or calling a one-tap decision."
+            note="Service is the shop's highest-intent page, but the original opened with centered paragraphs and vendor logos. The redesign states the offer, then makes booking or calling a one-tap decision."
             before={beforeService.url}
             after={afterService.url}
-            beforeCaption="Before — centred paragraphs, logo clutter and a buried booking link."
+            beforeCaption="Before — centered paragraphs, logo clutter and a buried booking link."
             afterCaption="After — a direct headline, NAPA credibility in one line, and Schedule Service plus a tap-to-call number."
           />
         </div>
