@@ -5,6 +5,7 @@ import {
   NextProject,
   NumberedCards,
   OutcomeList,
+  PhoneFrame,
   Section,
   StatBand,
 } from "@/components/case-study-bits";
