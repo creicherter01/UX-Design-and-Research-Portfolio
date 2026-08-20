@@ -40,7 +40,7 @@ export const Route = createFileRoute("/work/flight-booking")({
 const PROBLEMS = [
   {
     title: "Confusing interfaces",
-    body: "Booking platforms overwhelm travellers with cluttered screens, unclear hierarchies and inconsistent patterns between steps.",
+    body: "Booking platforms overwhelm travelers with cluttered screens, unclear hierarchies and inconsistent patterns between steps.",
   },
   {
     title: "Difficult navigation",
@@ -167,7 +167,7 @@ function FlightCase() {
       <CaseHero
         index="02"
         title="Find Your Perfect Flight"
-        intro="I redesigned flight booking as a single interface that searches hundreds of airlines and travel sites at once, so travellers stop stitching the journey together themselves."
+        intro="I redesigned flight booking as a single interface that searches hundreds of airlines and travel sites at once, so travelers stop stitching the journey together themselves."
         meta={[
           { label: "Role", value: "UX Designer & Researcher (solo)" },
           { label: "Timeline", value: "Feb – Mar 2026" },
@@ -214,8 +214,8 @@ function FlightCase() {
 
       <Section
         eyebrow="The challenge"
-        title="A market that made travellers do the work"
-        lede="When I started this project I kept seeing the same gap: travellers were forced across multiple platforms, each with its own design language and flow. Those issues compounded into a broken experience where people searched several sites, compared prices by hand, and still weren't confident they'd made the right booking."
+        title="A market that made travelers do the work"
+        lede="When I started this project I kept seeing the same gap: travelers were forced across multiple platforms, each with its own design language and flow. Those issues compounded into a broken experience where people searched several sites, compared prices by hand, and still weren't confident they'd made the right booking."
       >
         <NumberedCards items={PROBLEMS} />
       </Section>
@@ -246,7 +246,7 @@ function FlightCase() {
         </div>
 
         <Reveal className="mt-12">
-          <p className="label-mono text-clay">Research artefacts</p>
+          <p className="label-mono text-clay">Research artifacts</p>
           <h3 className="mt-2 font-display text-xl">Affinity diagram & journey map</h3>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
             I clustered every interview note in Miro, then translated the clusters into a five-stage

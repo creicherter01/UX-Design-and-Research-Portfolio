@@ -61,7 +61,7 @@ const PROBLEMS = [
   },
   {
     title: "A contact form with no guidance",
-    body: "One generic form handled every enquiry type, forcing visitors to guess whether they were even in the right place to book service.",
+    body: "One generic form handled every inquiry type, forcing visitors to guess whether they were even in the right place to book service.",
   },
 ];
 
@@ -80,7 +80,7 @@ const FINDINGS = [
   },
   {
     finding:
-      "One-size-fits-all contact form — sales and service enquiries funnelled into the same undifferentiated fields, adding friction for both.",
+      "One-size-fits-all contact form — sales and service inquiries funneled into the same undifferentiated fields, adding friction for both.",
     solution:
       "An “I'm interested in” selector splits the form by intent, with direct call and text numbers surfaced for anyone who'd rather skip it.",
   },
@@ -268,7 +268,7 @@ function DawsonCase() {
           <p className="label-mono text-clay">What I'd do next</p>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
             With a live site in place, the natural next step is validation: moderated tests with
-            local customers on two tasks (book a service appointment, enquire about a vehicle), plus
+            local customers on two tasks (book a service appointment, inquire about a vehicle), plus
             simple analytics on which CTA wins. I'd also push for real photography of the shop and
             team — for a business whose advantage is being local and familiar, stock-feeling imagery
             leaves credibility on the table.
