@@ -185,8 +185,16 @@ function DawsonCase() {
       </Section>
 
       <Section
+        eyebrow="My process"
+        title="How I thought about it, step by step"
+        lede="Here's the order I worked in and the reasoning behind each move — including the conversation with the owners that decided the whole hierarchy."
+      >
+        <ThoughtProcess items={PROCESS} />
+      </Section>
+
+      <Section
         eyebrow="My approach"
-        title="UX audit before design"
+        title="Audit findings, and what I did about each one"
         lede="This was a real client engagement, so instead of opening with formal interviews I ran a structured audit of the live site — evaluating it against Nielsen's usability heuristics and benchmarking against modern dealership and service sites — then rebuilt the experience around the two clearest visitor intents: buying a car, and booking service."
         tone="muted"
       >
