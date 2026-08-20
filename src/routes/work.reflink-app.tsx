@@ -7,7 +7,6 @@ import {
   OutcomeList,
   PhoneFrame,
   Section,
-  StatBand,
 } from "@/components/case-study-bits";
 import { Reveal } from "@/components/reveal";
 
