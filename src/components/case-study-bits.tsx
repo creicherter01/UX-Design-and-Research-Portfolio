@@ -75,12 +75,14 @@ export function CaseHero({
 }
 
 export function Section({
+  id,
   eyebrow,
   title,
   lede,
   children,
   tone = "default",
 }: {
+  id?: string;
   eyebrow: string;
   title: string;
   lede?: string;
@@ -89,6 +91,7 @@ export function Section({
 }) {
   return (
     <section
+      id={id}
       className={
         tone === "muted"
           ? "border-b border-border bg-secondary/30"
