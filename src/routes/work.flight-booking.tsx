@@ -150,11 +150,6 @@ const TEST_STATS = [
     sub: "Mixed ages and travel frequency",
   },
   {
-    value: "9 → 6",
-    label: "Steps to complete a round-trip booking",
-    sub: "Seat selection pulled in-flow",
-  },
-  {
     value: "5",
     label: "Journey stages mapped from the interview notes",
     sub: "Affinity diagram and journey map",
