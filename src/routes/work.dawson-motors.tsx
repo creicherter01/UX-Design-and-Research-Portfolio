@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   BeforeAfter,
   CaseHero,
+  EmbedBoard,
   FindingRows,
   NextProject,
   NumberedCards,
@@ -193,6 +194,20 @@ function DawsonCase() {
         </div>
       </Section>
 
+
+      <Section
+        eyebrow="Thinking it through"
+        title="How I worked the problem"
+        lede="This is the board I actually worked on while auditing the site — findings, notes to myself and the layout thinking behind each screen. I'm including it raw because the reasoning matters more than the tidy final screens."
+        tone="muted"
+      >
+        <EmbedBoard
+          src="https://miro.com/app/live-embed/uXjVHvh3OLk=/?embedAutoplay=false"
+          title="Dawson Motors redesign — Miro working board"
+          caption="Pan and zoom inside the board, or open it full screen."
+          href="https://miro.com/app/board/uXjVHvh3OLk=/?share_link_id=931729459358"
+        />
+      </Section>
 
       <Section
         eyebrow="Before & after"

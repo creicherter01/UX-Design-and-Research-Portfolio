@@ -335,3 +335,44 @@ export function NextProject({ to, label }: { to: "/work/dawson-motors" | "/work/
     </section>
   );
 }
+
+export function EmbedBoard({
+  src,
+  title,
+  caption,
+  href,
+}: {
+  src: string;
+  title: string;
+  caption?: string;
+  href?: string;
+}) {
+  return (
+    <Reveal className="rounded-lg border border-border bg-card p-4 sm:p-6">
+      <div className="overflow-hidden rounded-md border border-border bg-secondary/40">
+        <iframe
+          src={src}
+          title={title}
+          loading="lazy"
+          allowFullScreen
+          className="aspect-[16/10] w-full border-0"
+        />
+      </div>
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+        {caption && (
+          <p className="label-mono max-w-2xl leading-relaxed text-muted-foreground">{caption}</p>
+        )}
+        {href && (
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="label-mono link-underline inline-flex items-center gap-1.5 text-clay"
+          >
+            Open full board <ArrowUpRight className="h-3 w-3" />
+          </a>
+        )}
+      </div>
+    </Reveal>
+  );
+}
