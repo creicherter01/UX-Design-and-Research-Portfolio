@@ -40,7 +40,7 @@ const MARQUEE = [
   "Design systems",
   "Hi-fi prototyping",
   "Heuristic audits",
-  "Behavioural science",
+  "Behavioral science",
 ];
 
 const STATS = [
@@ -139,18 +139,23 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-clay opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-clay" />
             </span>
-            <span className="label-mono text-muted-foreground">UX Designer &amp; Researcher · Open to roles</span>
+            <span className="label-mono text-muted-foreground">Open to UX roles</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mt-6 font-display text-[3.25rem] leading-[0.95] tracking-[-0.03em] sm:text-7xl lg:text-[5.5rem]"
+            className="mt-6"
           >
-            Courtney
-            <br />
-            <span className="text-sage-deep">Reicherter</span>
+            <span className="block font-display text-[2.25rem] leading-[0.95] tracking-[-0.02em] sm:text-4xl lg:text-5xl">
+              Courtney <span className="text-sage-deep">Reicherter</span>
+            </span>
+            <span className="mt-3 block font-display text-[2.75rem] leading-[0.95] tracking-[-0.03em] text-sage-deep sm:text-6xl lg:text-[4.75rem]">
+              UX Designer
+              <br />
+              &amp; Researcher
+            </span>
           </motion.h1>
 
           <motion.p
@@ -320,6 +325,26 @@ function Home() {
       <Hero />
       <Marquee />
 
+      <section id="work" className="scroll-mt-20 border-b border-border">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <Reveal>
+            <p className="label-mono text-clay">Selected work</p>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight tracking-tight sm:text-5xl">
+              Three projects, start to finish
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              One real client and two capstones — all carried from research and audit through to
+              high-fidelity, interactive prototypes.
+            </p>
+          </Reveal>
+          <div className="mt-12 space-y-6">
+            {PROJECTS.map((p, i) => (
+              <ProjectCard key={p.to} project={p} i={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <Reveal>
@@ -348,26 +373,6 @@ function Home() {
         </div>
       </section>
 
-
-      <section id="work" className="scroll-mt-20 border-b border-border">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
-          <Reveal>
-            <p className="label-mono text-clay">Selected work</p>
-            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight tracking-tight sm:text-5xl">
-              Three projects, start to finish
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              One real client and two capstones — all carried from research and audit through to
-              high-fidelity, interactive prototypes.
-            </p>
-          </Reveal>
-          <div className="mt-12 space-y-6">
-            {PROJECTS.map((p, i) => (
-              <ProjectCard key={p.to} project={p} i={i} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="border-b border-border bg-secondary/30">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:grid-cols-[1fr_1.1fr] sm:px-8">
