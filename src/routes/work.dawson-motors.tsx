@@ -8,7 +8,6 @@ import {
   NumberedCards,
   OutcomeList,
   Section,
-  StatBand,
   ThoughtProcess,
 } from "@/components/case-study-bits";
 
@@ -91,74 +90,6 @@ const FINDINGS = [
     solution:
       "Rebuilt fully responsive with generous spacing, larger touch targets and a consistent component system throughout.",
   },
-];
-
-const AUDIT_STATS = [
-  {
-    value: "0 → 3",
-    label: "Trust signals visible above the fold",
-    sub: "40+ years, Carfax rating, NAPA AutoCare",
-  },
-];
-
-const BENCHMARK_STATS = [
-  {
-    value: "50ms",
-    label: "Time it takes a visitor to form a first impression of a site's credibility",
-    sub: "Lindgaard et al., 2006",
-  },
-  {
-    value: "75%",
-    label: "Of users judge a company's credibility on visual design alone",
-    sub: "Stanford Web Credibility Project",
-  },
-  {
-    value: "88%",
-    label: "Of visitors are less likely to return after one bad experience",
-    sub: "Amazon Web Services / Toptal UX research",
-  },
-  {
-    value: "61%",
-    label: "Of mobile users leave immediately if they can't find what they need fast",
-    sub: "Google / Think with Google mobile research",
-  },
-];
-
-const PROCESS = [
-  {
-    phase: "01",
-    title: "Understand the business first",
-    did: "Before touching the layout I sat down with the owners and asked a simple question: if a stranger lands on your homepage, what do you most want them to do? They told me sales — they wanted to push the pre-owned side of the business harder.",
-    why: "Sales and service had been competing to be the star of the show on the old site, and that fight was the real problem. I couldn't fix the hierarchy until someone told me which intent wins, and that answer had to come from the people who run the shop, not from me guessing.",
-  },
-  {
-    phase: "02",
-    title: "Audit the live site instead of starting over",
-    did: "I walked the existing site page by page against Nielsen's usability heuristics, wrote down every place a first-time visitor would hesitate, and benchmarked it against modern dealership and repair sites. All of that thinking lives on the Miro board below.",
-    why: "This was a real client with a real reputation, not a blank canvas. Auditing kept me honest — it meant every change I proposed traced back to a specific problem I could point at, so the conversation stayed about the visitor's experience instead of my taste versus theirs.",
-  },
-  {
-    phase: "03",
-    title: "Split the two intents, then rank them",
-    did: "I gave the homepage two clearly separated primary actions — Browse Sales and Book Service — and let sales take the visual lead, then carried that split all the way through to the contact form with an 'I'm interested in' selector.",
-    why: "Two intents on one page only works if one of them is obviously first. Separating them stopped the buttons from canceling each other out, and letting sales lead honored what the owners actually asked for while still giving service customers a direct path instead of a dead end.",
-  },
-  {
-    phase: "04",
-    title: "Put 40 years of trust where people can see it",
-    did: "I pulled the years in business, the Carfax rating and the NAPA AutoCare certification above the fold, and rebuilt the whole thing responsive with bigger tap targets and a consistent set of components.",
-    why: "The shop's biggest advantage — four decades of being the place your neighbors go — was invisible on the old site. People decide whether a business feels credible almost instantly, so if that reputation isn't visible in the first screenful, it isn't doing any work at all.",
-  },
-];
-
-const OUTCOMES = [
-
-  "Two distinct CTAs replace one undifferentiated nav bar",
-  "Trust signals (years, rating, certification) surfaced above the fold",
-  "Contact form splits by intent instead of one generic form",
-  "Direct call and text numbers offered as a low-friction alternative",
-  "Fully responsive layout with larger, thumb-friendly targets",
-  "A consistent component system replaces one-off page styling",
 ];
 
 function DawsonCase() {
