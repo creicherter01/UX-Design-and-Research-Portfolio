@@ -139,18 +139,23 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-clay opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-clay" />
             </span>
-            <span className="label-mono text-muted-foreground">UX Designer &amp; Researcher · Open to roles</span>
+            <span className="label-mono text-muted-foreground">Open to UX roles</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mt-6 font-display text-[3.25rem] leading-[0.95] tracking-[-0.03em] sm:text-7xl lg:text-[5.5rem]"
+            className="mt-6"
           >
-            Courtney
-            <br />
-            <span className="text-sage-deep">Reicherter</span>
+            <span className="block font-display text-[2.25rem] leading-[0.95] tracking-[-0.02em] sm:text-4xl lg:text-5xl">
+              Courtney <span className="text-sage-deep">Reicherter</span>
+            </span>
+            <span className="mt-3 block font-display text-[2.75rem] leading-[0.95] tracking-[-0.03em] text-sage-deep sm:text-6xl lg:text-[4.75rem]">
+              UX Designer
+              <br />
+              &amp; Researcher
+            </span>
           </motion.h1>
 
           <motion.p
