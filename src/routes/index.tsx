@@ -105,7 +105,7 @@ const PROJECTS = [
     blurb:
       "A mobile app concept that matches youth and minor league sports organizers with qualified referees — designed for both sides of a two-sided marketplace.",
     tags: ["Mobile UX", "Two-Sided Marketplace", "Prototyping"],
-    kind: "UX capstone / personal project",
+    kind: "Personal project",
     image: reflinkCover.url,
   },
 ];
@@ -333,7 +333,7 @@ function Home() {
               Three projects, start to finish
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              One real client and two capstones — all carried from research and audit through to
+              One real client, one capstone, and one personal project — all carried from research and audit through to
               high-fidelity, interactive prototypes.
             </p>
           </Reveal>
