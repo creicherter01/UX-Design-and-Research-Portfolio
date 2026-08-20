@@ -63,7 +63,40 @@ const PROBLEMS = [
     title: "A contact form with no guidance",
     body: "One generic form handled every inquiry type, forcing visitors to guess whether they were even in the right place to book service.",
   },
+
+const PROCESS = [
+  {
+    phase: "01",
+    title: "Audited the live site before touching design",
+    did: "I walked the existing site the way a first-time visitor would, screen by screen, and logged every friction point against Nielsen's usability heuristics on my Miro board.",
+    why: "This was a real business, not a made-up brief. I wanted my recommendations tied to something I could point at and defend, instead of my own taste.",
+  },
+  {
+    phase: "02",
+    title: "Talked to the owners about where the business was going",
+    did: "I asked what they actually wanted to grow. They told me pre-owned sales was the priority, but service kept the lights on and regulars needed to reach it fast.",
+    why: "The hierarchy of a homepage is a business decision as much as a design one. Guessing would have meant designing for the wrong goal.",
+  },
+  {
+    phase: "03",
+    title: "Split the homepage by intent",
+    did: "I gave sales and service two distinct primary paths instead of one grey row of buttons, with sales leading visually and service one tap away.",
+    why: "Buying a car and booking a repair are different mindsets. Making people share a path meant both groups did extra work to get anywhere.",
+  },
+  {
+    phase: "04",
+    title: "Pulled the trust story above the fold",
+    did: "I moved the 40-year history, Carfax rating and NAPA AutoCare status into the first screen alongside the hero.",
+    why: "Their reputation was the strongest thing they had and the old site hid it. Trust is what makes someone hand over their car keys or their money.",
+  },
+  {
+    phase: "05",
+    title: "Rebuilt contact around what people are asking for",
+    did: "I added an \"I'm interested in\" selector and surfaced call and text numbers directly, rather than routing every inquiry through one generic form.",
+    why: "A single form made the visitor figure out the routing. Sorting by intent up front is less thinking for them and cleaner handoffs for the shop.",
+  },
 ];
+
 
 const FINDINGS = [
   {
