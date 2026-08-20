@@ -224,9 +224,12 @@ function AnimatedStat({ value }: { value: string }) {
   useEffect(() => {
     if (!inView || !match || !ref.current) return;
     const node = ref.current;
-    const target = Number(match[2].replace(/,/g, ""));
+    const prefix = match[1] ?? "";
+    const num = match[2] ?? "";
+    const suffix = match[3] ?? "";
+    const target = Number(num.replace(/,/g, ""));
     if (!Number.isFinite(target)) return;
-    const decimals = match[2].includes(".") ? match[2].split(".")[1].length : 0;
+    const decimals = num.includes(".") ? (num.split(".")[1]?.length ?? 0) : 0;
     const controls = animate(0, target, {
       duration: 1.1,
       ease: "easeOut",
