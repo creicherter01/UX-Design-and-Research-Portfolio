@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as WorkDawsonMotorsRouteImport } from './routes/work.dawson-motors'
 import { Route as WorkFlightBookingRouteImport } from './routes/work.flight-booking'
 import { Route as WorkReflinkAppRouteImport } from './routes/work.reflink-app'
+import { Route as WorkReflinkAppPrototypeRouteImport } from './routes/work.reflink-app.prototype'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const WorkReflinkAppRoute = WorkReflinkAppRouteImport.update({
   path: '/work/reflink-app',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkReflinkAppPrototypeRoute = WorkReflinkAppPrototypeRouteImport.update({
+  id: '/prototype',
+  path: '/prototype',
+  getParentRoute: () => WorkReflinkAppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -53,7 +59,8 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/work/dawson-motors': typeof WorkDawsonMotorsRoute
   '/work/flight-booking': typeof WorkFlightBookingRoute
-  '/work/reflink-app': typeof WorkReflinkAppRoute
+  '/work/reflink-app': typeof WorkReflinkAppRouteWithChildren
+  '/work/reflink-app/prototype': typeof WorkReflinkAppPrototypeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +68,8 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/work/dawson-motors': typeof WorkDawsonMotorsRoute
   '/work/flight-booking': typeof WorkFlightBookingRoute
-  '/work/reflink-app': typeof WorkReflinkAppRoute
+  '/work/reflink-app': typeof WorkReflinkAppRouteWithChildren
+  '/work/reflink-app/prototype': typeof WorkReflinkAppPrototypeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,7 +78,8 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/work/dawson-motors': typeof WorkDawsonMotorsRoute
   '/work/flight-booking': typeof WorkFlightBookingRoute
-  '/work/reflink-app': typeof WorkReflinkAppRoute
+  '/work/reflink-app': typeof WorkReflinkAppRouteWithChildren
+  '/work/reflink-app/prototype': typeof WorkReflinkAppPrototypeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/work/dawson-motors'
     | '/work/flight-booking'
     | '/work/reflink-app'
+    | '/work/reflink-app/prototype'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/work/dawson-motors'
     | '/work/flight-booking'
     | '/work/reflink-app'
+    | '/work/reflink-app/prototype'
   id:
     | '__root__'
     | '/'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/work/dawson-motors'
     | '/work/flight-booking'
     | '/work/reflink-app'
+    | '/work/reflink-app/prototype'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -105,7 +117,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   WorkDawsonMotorsRoute: typeof WorkDawsonMotorsRoute
   WorkFlightBookingRoute: typeof WorkFlightBookingRoute
-  WorkReflinkAppRoute: typeof WorkReflinkAppRoute
+  WorkReflinkAppRoute: typeof WorkReflinkAppRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -152,8 +164,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkReflinkAppRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/reflink-app/prototype': {
+      id: '/work/reflink-app/prototype'
+      path: '/prototype'
+      fullPath: '/work/reflink-app/prototype'
+      preLoaderRoute: typeof WorkReflinkAppPrototypeRouteImport
+      parentRoute: typeof WorkReflinkAppRoute
+    }
   }
 }
+
+interface WorkReflinkAppRouteChildren {
+  WorkReflinkAppPrototypeRoute: typeof WorkReflinkAppPrototypeRoute
+}
+
+const WorkReflinkAppRouteChildren: WorkReflinkAppRouteChildren = {
+  WorkReflinkAppPrototypeRoute: WorkReflinkAppPrototypeRoute,
+}
+
+const WorkReflinkAppRouteWithChildren = WorkReflinkAppRoute._addFileChildren(
+  WorkReflinkAppRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -161,7 +192,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   WorkDawsonMotorsRoute: WorkDawsonMotorsRoute,
   WorkFlightBookingRoute: WorkFlightBookingRoute,
-  WorkReflinkAppRoute: WorkReflinkAppRoute,
+  WorkReflinkAppRoute: WorkReflinkAppRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
