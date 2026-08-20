@@ -89,24 +89,19 @@ const FINDINGS = [
 
 const STATS = [
   {
-    value: "1,400+",
-    label: "Officials in the network",
-    sub: "Design target: make scale feel manageable for organizers",
-  },
-  {
-    value: "18 min",
-    label: "Average time to fill an open game",
-    sub: "Hypothetical target benchmark for the concept",
-  },
-  {
-    value: "96%",
-    label: "Game coverage rate",
-    sub: "Target outcome for the organizer dashboard",
-  },
-  {
     value: "4",
     label: "Users interviewed across both roles",
     sub: "2 organizers, 2 referees",
+  },
+  {
+    value: "2",
+    label: "Role-based dashboards designed from opposite mental models",
+    sub: "Organizer and referee",
+  },
+  {
+    value: "1 tap",
+    label: "To accept or decline a game invite",
+    sub: "Core interaction the flow is built around",
   },
 ];
 
@@ -179,13 +174,13 @@ function ReflinkCase() {
       </Section>
 
       <Section
-        eyebrow="By the numbers"
-        title="What I aimed for with this concept"
-        lede="These are design targets I set to judge density, hierarchy and flow decisions — not measured outcomes from a real product."
+        eyebrow="Scope"
+        title="What this concept covered"
+        lede="RefLink is a self-directed concept, so there are no usage numbers behind it. These are the counts from my research and what I actually designed."
       >
         <StatBand
           items={STATS}
-          note="Hypothetical targets used as constraints while designing, not validated metrics."
+          note="Counts from my own interviews and the screens I designed. No live product or usage data exists for this concept."
         />
       </Section>
 

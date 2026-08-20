@@ -93,14 +93,9 @@ const FINDINGS = [
 
 const AUDIT_STATS = [
   {
-    value: "+20%",
-    label: "Task-flow efficiency vs. the original live site",
-    sub: "Moderated task timings, before vs. after",
-  },
-  {
-    value: "23",
-    label: "Usability issues logged across 6 pages",
-    sub: "Nielsen heuristic audit",
+    value: "6",
+    label: "Pages reviewed against Nielsen's usability heuristics",
+    sub: "Heuristic audit of the original site",
   },
   {
     value: "4 → 1",
@@ -192,7 +187,7 @@ function DawsonCase() {
       >
         <StatBand
           items={AUDIT_STATS}
-          note="Figures measured by me across the original site and the rebuilt prototype (heuristic audit + task-flow analysis, June–August 2025). No live analytics were available on the original site."
+          note="Counted by me across the original site and the rebuilt prototype (heuristic audit and click-path comparison, June 2025). No live analytics were available on the original site, so these are structural counts rather than performance results."
         />
         <div className="mt-14">
           <p className="label-mono text-clay">Why it mattered</p>
