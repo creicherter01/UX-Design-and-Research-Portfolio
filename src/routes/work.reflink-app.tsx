@@ -125,7 +125,7 @@ function ReflinkCase() {
       <CaseHero
         index="03"
         title="RefLink"
-        intro="A mobile-responsive web app concept I designed to connect youth and minor league sports organizers with qualified referees. I explored the core flows for both sides — posting games and filling them — so the product works as well on a phone between games as it does on a desk at the league office."
+        intro="A mobile app concept I designed to connect youth and minor league sports organizers with qualified referees. I explored the core flows for both sides — posting games and filling them — so the product works on the device referees actually carry: their phone."
         meta={[
           { label: "Role", value: "UX Designer & Researcher (solo)" },
           { label: "Timeline", value: "Mar – Apr 2026" },
