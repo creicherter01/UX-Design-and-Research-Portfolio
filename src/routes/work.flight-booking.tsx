@@ -135,6 +135,33 @@ const PROCESS = [
   },
 ];
 
+const THOUGHTS = [
+  {
+    phase: "01",
+    title: "Start with the story people tell",
+    did: "I interviewed four people across different ages and travel habits and, where I could, watched them book a trip end to end while narrating what they were thinking.",
+    why: "I didn't want opinions about booking sites, I wanted to see where people stalled. Watching someone hesitate for a few seconds tells you more than asking them what they'd change, because most people can't name the thing that's slowing them down.",
+  },
+  {
+    phase: "02",
+    title: "Cluster the notes before drawing anything",
+    did: "Every observation went onto sticky notes in Miro, then I grouped them into an affinity diagram and turned the groups into a five-stage journey map with the emotional highs and lows of the task.",
+    why: "I wanted the problems to come out of the notes rather than out of my own head. The journey map is what showed me the anxiety wasn't concentrated on one screen — it built up in the handoffs between steps, which changed what I chose to design.",
+  },
+  {
+    phase: "03",
+    title: "Sketch wide, then commit",
+    did: "I sketched several different structures for search and results, tried a few information architectures, and only pushed the two most promising ones into mid-fidelity prototypes.",
+    why: "My first idea is rarely my best one, and cheap sketches are the only place it's affordable to be wrong. Testing two structures against each other also gave me a reason to pick one, instead of defending whatever I happened to draw first.",
+  },
+  {
+    phase: "04",
+    title: "Fix the small things that carried the most weight",
+    did: "I labeled which leg you're booking on every screen, rewrote baggage rules in plain language, brought seat selection inside the flow instead of a third-party redirect, and added an explicit confirmation screen.",
+    why: "This is the part that surprised me most: the smallest details made the biggest difference. None of these were new features — they were just moments of certainty. Once people knew exactly where they were and what was included, the whole flow felt calmer even though the number of steps barely moved.",
+  },
+];
+
 const OUTCOMES = [
   "One unified search across hundreds of airlines and travel sites",
   "Departure and return legs visually distinct at every step",
