@@ -63,6 +63,7 @@ const PROBLEMS = [
     title: "A contact form with no guidance",
     body: "One generic form handled every inquiry type, forcing visitors to guess whether they were even in the right place to book service.",
   },
+];
 
 const PROCESS = [
   {
