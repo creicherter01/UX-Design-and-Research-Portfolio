@@ -212,7 +212,7 @@ function ReflinkCase() {
       <Section
         eyebrow="The result"
         title="What the final prototype delivers"
-        lede="A responsive, two-sided prototype where organizers can fill a game in minutes and referees can manage their whole schedule from a phone."
+        lede="A two-sided mobile prototype where organizers can fill a game in minutes and referees can manage their whole schedule from a phone."
       >
         <OutcomeList items={OUTCOMES} />
         <Reveal delay={0.1} className="mt-10 rounded-lg border border-border bg-card p-7">
