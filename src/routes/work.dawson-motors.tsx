@@ -187,7 +187,7 @@ function DawsonCase() {
       >
         <StatBand
           items={AUDIT_STATS}
-          note="Figures measured by me across the original site and the rebuilt prototype (heuristic audit + task-flow analysis, June–August 2025). No live analytics were available on the original site."
+          note="Counted by me across the original site and the rebuilt prototype (heuristic audit and click-path comparison, June 2025). No live analytics were available on the original site, so these are structural counts rather than performance results."
         />
         <div className="mt-14">
           <p className="label-mono text-clay">Why it mattered</p>
