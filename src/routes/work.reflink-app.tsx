@@ -12,7 +12,7 @@ import {
 import { Reveal } from "@/components/reveal";
 
 const heroDesktop = { url: "/media/reflink-hero.png" };
-const heroMobile = { url: "/media/reflink-hero-mobile.png" };
+
 const organizerDash = { url: "/media/reflink-organizer-dashboard.png" };
 const refereeDash = { url: "/media/reflink-referee-dashboard.png" };
 
