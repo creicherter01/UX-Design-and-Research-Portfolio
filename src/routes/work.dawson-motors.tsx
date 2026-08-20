@@ -93,14 +93,9 @@ const FINDINGS = [
 
 const AUDIT_STATS = [
   {
-    value: "+20%",
-    label: "Task-flow efficiency vs. the original live site",
-    sub: "Moderated task timings, before vs. after",
-  },
-  {
-    value: "23",
-    label: "Usability issues logged across 6 pages",
-    sub: "Nielsen heuristic audit",
+    value: "6",
+    label: "Pages reviewed against Nielsen's usability heuristics",
+    sub: "Heuristic audit of the original site",
   },
   {
     value: "4 → 1",
