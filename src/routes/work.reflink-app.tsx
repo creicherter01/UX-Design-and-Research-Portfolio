@@ -23,7 +23,7 @@ export const Route = createFileRoute("/work/reflink-app")({
       {
         name: "description",
         content:
-          "A mobile-responsive web app concept connecting youth and minor league sports organizers with qualified referees. Case study covers two-sided UX, mobile-first flows and role-based dashboards.",
+          "A mobile app concept connecting youth and minor league sports organizers with qualified referees. Case study covers two-sided UX, mobile-first flows and role-based dashboards.",
       },
       {
         property: "og:title",
