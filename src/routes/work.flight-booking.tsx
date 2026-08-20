@@ -145,9 +145,9 @@ const OUTCOMES = [
 
 const TEST_STATS = [
   {
-    value: "+10%",
-    label: "User satisfaction vs. the original test site",
-    sub: "Post-task satisfaction ratings, 8 participants",
+    value: "4",
+    label: "Users interviewed and observed booking end to end",
+    sub: "Mixed ages and travel frequency",
   },
   {
     value: "9 → 6",
@@ -155,14 +155,14 @@ const TEST_STATS = [
     sub: "Seat selection pulled in-flow",
   },
   {
-    value: "100%",
-    label: "Of testers correctly identified which leg they were booking",
-    sub: "Up from 5 of 8 on the original flow",
+    value: "5",
+    label: "Journey stages mapped from the interview notes",
+    sub: "Affinity diagram and journey map",
   },
   {
-    value: "4",
-    label: "Users interviewed and observed booking end to end",
-    sub: "Mixed ages and travel frequency",
+    value: "0",
+    label: "Third-party redirects left in the booking flow",
+    sub: "Down from one external seat picker",
   },
 ];
 
