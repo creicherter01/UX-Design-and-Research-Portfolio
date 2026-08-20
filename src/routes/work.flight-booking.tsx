@@ -7,6 +7,7 @@ import {
   OutcomeList,
   Section,
   StatBand,
+  ThoughtProcess,
 } from "@/components/case-study-bits";
 import { Reveal } from "@/components/reveal";
 const protoResults = { url: "/media/Screenshot_2026-08-12_202729.png" };
@@ -40,7 +41,7 @@ export const Route = createFileRoute("/work/flight-booking")({
 const PROBLEMS = [
   {
     title: "Confusing interfaces",
-    body: "Booking platforms overwhelm travellers with cluttered screens, unclear hierarchies and inconsistent patterns between steps.",
+    body: "Booking platforms overwhelm travelers with cluttered screens, unclear hierarchies and inconsistent patterns between steps.",
   },
   {
     title: "Difficult navigation",
@@ -134,6 +135,33 @@ const PROCESS = [
   },
 ];
 
+const THOUGHTS = [
+  {
+    phase: "01",
+    title: "Start with the story people tell",
+    did: "I interviewed four people across different ages and travel habits and, where I could, watched them book a trip end to end while narrating what they were thinking.",
+    why: "I didn't want opinions about booking sites, I wanted to see where people stalled. Watching someone hesitate for a few seconds tells you more than asking them what they'd change, because most people can't name the thing that's slowing them down.",
+  },
+  {
+    phase: "02",
+    title: "Cluster the notes before drawing anything",
+    did: "Every observation went onto sticky notes in Miro, then I grouped them into an affinity diagram and turned the groups into a five-stage journey map with the emotional highs and lows of the task.",
+    why: "I wanted the problems to come out of the notes rather than out of my own head. The journey map is what showed me the anxiety wasn't concentrated on one screen — it built up in the handoffs between steps, which changed what I chose to design.",
+  },
+  {
+    phase: "03",
+    title: "Sketch wide, then commit",
+    did: "I sketched several different structures for search and results, tried a few information architectures, and only pushed the two most promising ones into mid-fidelity prototypes.",
+    why: "My first idea is rarely my best one, and cheap sketches are the only place it's affordable to be wrong. Testing two structures against each other also gave me a reason to pick one, instead of defending whatever I happened to draw first.",
+  },
+  {
+    phase: "04",
+    title: "Fix the small things that carried the most weight",
+    did: "I labeled which leg you're booking on every screen, rewrote baggage rules in plain language, brought seat selection inside the flow instead of a third-party redirect, and added an explicit confirmation screen.",
+    why: "This is the part that surprised me most: the smallest details made the biggest difference. None of these were new features — they were just moments of certainty. Once people knew exactly where they were and what was included, the whole flow felt calmer even though the number of steps barely moved.",
+  },
+];
+
 const OUTCOMES = [
   "One unified search across hundreds of airlines and travel sites",
   "Departure and return legs visually distinct at every step",
@@ -167,7 +195,7 @@ function FlightCase() {
       <CaseHero
         index="02"
         title="Find Your Perfect Flight"
-        intro="I redesigned flight booking as a single interface that searches hundreds of airlines and travel sites at once, so travellers stop stitching the journey together themselves."
+        intro="I redesigned flight booking as a single interface that searches hundreds of airlines and travel sites at once, so travelers stop stitching the journey together themselves."
         meta={[
           { label: "Role", value: "UX Designer & Researcher (solo)" },
           { label: "Timeline", value: "Feb – Mar 2026" },
@@ -214,10 +242,18 @@ function FlightCase() {
 
       <Section
         eyebrow="The challenge"
-        title="A market that made travellers do the work"
-        lede="When I started this project I kept seeing the same gap: travellers were forced across multiple platforms, each with its own design language and flow. Those issues compounded into a broken experience where people searched several sites, compared prices by hand, and still weren't confident they'd made the right booking."
+        title="A market that made travelers do the work"
+        lede="When I started this project I kept seeing the same gap: travelers were forced across multiple platforms, each with its own design language and flow. Those issues compounded into a broken experience where people searched several sites, compared prices by hand, and still weren't confident they'd made the right booking."
       >
         <NumberedCards items={PROBLEMS} />
+      </Section>
+
+      <Section
+        eyebrow="My process"
+        title="How I thought about it, step by step"
+        lede="The order I worked in, and the reasoning behind each decision — including the one finding that changed how I designed the rest of the flow."
+      >
+        <ThoughtProcess items={THOUGHTS} />
       </Section>
 
       <Section
@@ -246,7 +282,7 @@ function FlightCase() {
         </div>
 
         <Reveal className="mt-12">
-          <p className="label-mono text-clay">Research artefacts</p>
+          <p className="label-mono text-clay">Research artifacts</p>
           <h3 className="mt-2 font-display text-xl">Affinity diagram & journey map</h3>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
             I clustered every interview note in Miro, then translated the clusters into a five-stage

@@ -9,6 +9,7 @@ import {
   OutcomeList,
   Section,
   StatBand,
+  ThoughtProcess,
 } from "@/components/case-study-bits";
 
 import { Reveal } from "@/components/reveal";
@@ -61,7 +62,7 @@ const PROBLEMS = [
   },
   {
     title: "A contact form with no guidance",
-    body: "One generic form handled every enquiry type, forcing visitors to guess whether they were even in the right place to book service.",
+    body: "One generic form handled every inquiry type, forcing visitors to guess whether they were even in the right place to book service.",
   },
 ];
 
@@ -80,7 +81,7 @@ const FINDINGS = [
   },
   {
     finding:
-      "One-size-fits-all contact form — sales and service enquiries funnelled into the same undifferentiated fields, adding friction for both.",
+      "One-size-fits-all contact form — sales and service inquiries funneled into the same undifferentiated fields, adding friction for both.",
     solution:
       "An “I'm interested in” selector splits the form by intent, with direct call and text numbers surfaced for anyone who'd rather skip it.",
   },
@@ -123,6 +124,33 @@ const BENCHMARK_STATS = [
   },
 ];
 
+const PROCESS = [
+  {
+    phase: "01",
+    title: "Understand the business first",
+    did: "Before touching the layout I sat down with the owners and asked a simple question: if a stranger lands on your homepage, what do you most want them to do? They told me sales — they wanted to push the pre-owned side of the business harder.",
+    why: "Sales and service had been competing to be the star of the show on the old site, and that fight was the real problem. I couldn't fix the hierarchy until someone told me which intent wins, and that answer had to come from the people who run the shop, not from me guessing.",
+  },
+  {
+    phase: "02",
+    title: "Audit the live site instead of starting over",
+    did: "I walked the existing site page by page against Nielsen's usability heuristics, wrote down every place a first-time visitor would hesitate, and benchmarked it against modern dealership and repair sites. All of that thinking lives on the Miro board below.",
+    why: "This was a real client with a real reputation, not a blank canvas. Auditing kept me honest — it meant every change I proposed traced back to a specific problem I could point at, so the conversation stayed about the visitor's experience instead of my taste versus theirs.",
+  },
+  {
+    phase: "03",
+    title: "Split the two intents, then rank them",
+    did: "I gave the homepage two clearly separated primary actions — Browse Sales and Book Service — and let sales take the visual lead, then carried that split all the way through to the contact form with an 'I'm interested in' selector.",
+    why: "Two intents on one page only works if one of them is obviously first. Separating them stopped the buttons from canceling each other out, and letting sales lead honored what the owners actually asked for while still giving service customers a direct path instead of a dead end.",
+  },
+  {
+    phase: "04",
+    title: "Put 40 years of trust where people can see it",
+    did: "I pulled the years in business, the Carfax rating and the NAPA AutoCare certification above the fold, and rebuilt the whole thing responsive with bigger tap targets and a consistent set of components.",
+    why: "The shop's biggest advantage — four decades of being the place your neighbors go — was invisible on the old site. People decide whether a business feels credible almost instantly, so if that reputation isn't visible in the first screenful, it isn't doing any work at all.",
+  },
+];
+
 const OUTCOMES = [
 
   "Two distinct CTAs replace one undifferentiated nav bar",
@@ -158,8 +186,16 @@ function DawsonCase() {
       </Section>
 
       <Section
+        eyebrow="My process"
+        title="How I thought about it, step by step"
+        lede="Here's the order I worked in and the reasoning behind each move — including the conversation with the owners that decided the whole hierarchy."
+      >
+        <ThoughtProcess items={PROCESS} />
+      </Section>
+
+      <Section
         eyebrow="My approach"
-        title="UX audit before design"
+        title="Audit findings, and what I did about each one"
         lede="This was a real client engagement, so instead of opening with formal interviews I ran a structured audit of the live site — evaluating it against Nielsen's usability heuristics and benchmarking against modern dealership and service sites — then rebuilt the experience around the two clearest visitor intents: buying a car, and booking service."
         tone="muted"
       >
@@ -268,7 +304,7 @@ function DawsonCase() {
           <p className="label-mono text-clay">What I'd do next</p>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
             With a live site in place, the natural next step is validation: moderated tests with
-            local customers on two tasks (book a service appointment, enquire about a vehicle), plus
+            local customers on two tasks (book a service appointment, inquire about a vehicle), plus
             simple analytics on which CTA wins. I'd also push for real photography of the shop and
             team — for a business whose advantage is being local and familiar, stock-feeling imagery
             leaves credibility on the table.

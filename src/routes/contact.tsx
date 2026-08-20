@@ -73,7 +73,7 @@ function ContactPage() {
                 <p className="label-mono mt-6 text-muted-foreground">Email</p>
                 <p className="mt-2 break-all font-display text-2xl">{EMAIL}</p>
                 <p className="mt-3 text-sm text-muted-foreground">
-                  Best for role enquiries, freelance work and anything with detail attached.
+                  Best for role inquiries, freelance work and anything with detail attached.
                 </p>
               </div>
               <div className="mt-7 flex flex-wrap gap-3">

@@ -376,3 +376,29 @@ export function EmbedBoard({
     </Reveal>
   );
 }
+
+export function ThoughtProcess({
+  items,
+}: {
+  items: { phase: string; title: string; did: string; why: string }[];
+}) {
+  return (
+    <ol className="relative space-y-4 border-l border-border pl-6 sm:pl-8">
+      {items.map((it, i) => (
+        <Reveal key={it.title} delay={i * 0.06}>
+          <li className="group relative rounded-lg border border-border bg-card p-6 transition-colors duration-300 hover:border-sage-deep hover:shadow-md">
+            <span className="absolute -left-[31px] top-8 h-2.5 w-2.5 rounded-full bg-clay ring-4 ring-background transition-transform duration-300 group-hover:scale-150 sm:-left-[39px]" />
+            <p className="label-mono text-sage-deep">
+              Step {it.phase} · {it.title}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed">{it.did}</p>
+            <div className="mt-4 border-l-2 border-clay/40 pl-4 transition-all duration-300 group-hover:border-clay group-hover:pl-5">
+              <p className="label-mono text-clay">Why I did it</p>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{it.why}</p>
+            </div>
+          </li>
+        </Reveal>
+      ))}
+    </ol>
+  );
+}

@@ -7,6 +7,7 @@ import {
   OutcomeList,
   PhoneFrame,
   Section,
+  ThoughtProcess,
 } from "@/components/case-study-bits";
 import { Reveal } from "@/components/reveal";
 
@@ -87,6 +88,33 @@ const FINDINGS = [
 ];
 
 
+const THOUGHTS = [
+  {
+    phase: "01",
+    title: "Where the idea came from",
+    did: "I grew up playing sports, and I have several family members who teach during the week and referee on the side. They talk constantly about how disorganized officiating is — how hard it is for leagues to find refs who actually know what they're doing, and how hard it is for refs to find games that fit around a full-time job.",
+    why: "I wanted a project rooted in a problem I'd already heard described dozens of times at family dinners rather than one I invented to have something to design. Starting from real complaints meant I already knew which frustrations were loudest on each side.",
+  },
+  {
+    phase: "02",
+    title: "Frame it as two users, not one product",
+    did: "I wrote out the goals of an organizer and the goals of a referee separately before sketching a single screen, and kept them in two columns as I worked.",
+    why: "The two sides have opposite mental models. An organizer is trying to fill an empty slot; a referee is trying to protect their time. If I designed one interface for both, I'd end up with something that half-served each, so I let the underlying game data stay shared and split the actions by role.",
+  },
+  {
+    phase: "03",
+    title: "Design for the phone first",
+    did: "I built everything as a phone-native experience: card-based open games, tap to accept or decline, filters for sport, distance and pay, and a schedule view that's always one tap away.",
+    why: "This was the hardest call, and I chose the referee's phone as the constraint on purpose. Refs are making these decisions in seconds — in a parking lot, between games, walking to a field. If the flow doesn't work one-handed on a phone, it doesn't work at all, even if the organizer side would have been easier to design on a wide screen.",
+  },
+  {
+    phase: "04",
+    title: "Make trust visible before the whistle",
+    did: "I surfaced certification level, completed games and rating directly on assignment rows and game details, instead of hiding them a tap away on a profile.",
+    why: "Nobody assigns a stranger to a youth game. My family's whole complaint was not knowing whether a ref actually knew the rules, so credibility had to sit where the decision gets made — on the row you're about to accept — not on a screen someone might never open.",
+  },
+];
+
 const OUTCOMES = [
   "Mobile-first design so referees can manage games from their phone",
   "Role-based dashboards for organizers and referees, built from opposite mental models",
@@ -137,6 +165,14 @@ function ReflinkCase() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="My process"
+        title="How I thought about it, step by step"
+        lede="This started as an idea rather than a brief, so here's the reasoning I worked through — where it came from and the calls I made along the way."
+      >
+        <ThoughtProcess items={THOUGHTS} />
+      </Section>
 
       <Section
         eyebrow="The challenge"
