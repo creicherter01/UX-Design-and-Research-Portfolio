@@ -137,7 +137,7 @@ function ReflinkCase() {
           { label: "Tools", value: "Figma" },
           { label: "Type", value: "Personal project" },
         ]}
-        prototype="https://reflinkappbuild.netlify.app/"
+        prototypeAnchor="#prototype"
       />
 
       <section className="border-b border-border">
