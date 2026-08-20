@@ -210,11 +210,11 @@ function FlightCase() {
 
       <Section
         eyebrow="By the numbers"
-        title="What testing measured"
-        lede="Figures below come from my own moderated task-based sessions comparing the prototype against the booking sites participants normally use."
+        title="What the research and redesign covered"
+        lede="These are counts from my own research and from the flow itself, not performance results — this was a capstone project without live traffic to measure."
         tone="muted"
       >
-        <StatBand items={TEST_STATS} note="Measured in moderated sessions with 8 participants completing the same round-trip booking task on the original sites and on the prototype." />
+        <StatBand items={TEST_STATS} note="Counts from my interviews, synthesis and a step-by-step comparison of the original booking flows against my prototype." />
       </Section>
 
       <Section
