@@ -202,48 +202,6 @@ function DawsonCase() {
         <FindingRows items={FINDINGS} leftLabel="Audit finding" rightLabel="Design solution" />
       </Section>
 
-      <Section
-        eyebrow="By the numbers"
-        title="What the audit measured"
-        lede="Before any visual work, I quantified the problem so each design decision had a number attached to it — and so the client could see the difference in concrete terms rather than taste."
-      >
-        <StatBand
-          items={AUDIT_STATS}
-          note="Counted by comparing the original site and the rebuilt prototype. No live analytics were available, so this is a structural count rather than a performance result."
-        />
-        <div className="mt-14">
-          <p className="label-mono text-clay">Why it mattered</p>
-          <h3 className="mt-3 font-display text-2xl leading-snug sm:text-3xl">
-            First impressions happen fast
-          </h3>
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            For a business whose whole advantage is four decades of local trust, the gap between the
-            shop and its website was the real problem. These findings helped me fight for trust
-            signals and one obvious next step above everything else.
-          </p>
-          <div className="mt-8">
-            <StatBand
-              items={BENCHMARK_STATS}
-              note="Published third-party UX research, cited for context — not results from this project."
-            />
-          </div>
-        </div>
-      </Section>
-
-
-      <Section
-        eyebrow="Thinking it through"
-        title="How I worked the problem"
-        lede="This is the board I actually worked on while auditing the site — findings, notes to myself and the layout thinking behind each screen. I'm including it raw because the reasoning matters more than the tidy final screens."
-        tone="muted"
-      >
-        <EmbedBoard
-          src="https://miro.com/app/live-embed/uXjVHvh3OLk=/?embedAutoplay=false"
-          title="Dawson Motors redesign — Miro working board"
-          caption="Pan and zoom inside the board, or open it full screen."
-          href="https://miro.com/app/board/uXjVHvh3OLk=/?share_link_id=931729459358"
-        />
-      </Section>
 
       <Section
         eyebrow="Before & after"
