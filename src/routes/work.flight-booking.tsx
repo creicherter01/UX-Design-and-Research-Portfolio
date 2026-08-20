@@ -249,6 +249,14 @@ function FlightCase() {
       </Section>
 
       <Section
+        eyebrow="My process"
+        title="How I thought about it, step by step"
+        lede="The order I worked in, and the reasoning behind each decision — including the one finding that changed how I designed the rest of the flow."
+      >
+        <ThoughtProcess items={THOUGHTS} />
+      </Section>
+
+      <Section
         eyebrow="Research"
         title="How I learned what actually breaks"
         lede="Four interviews, observed booking sessions, affinity mapping and journey maps across five stages — then usability walkthroughs to confirm the friction was structural rather than cosmetic."
