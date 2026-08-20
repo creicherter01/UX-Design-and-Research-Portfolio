@@ -137,7 +137,7 @@ function ReflinkCase() {
           { label: "Tools", value: "Figma" },
           { label: "Type", value: "Personal project" },
         ]}
-        prototypeAnchor="#prototype"
+        prototype="/work/reflink-app/prototype"
       />
 
       <section className="border-b border-border">
