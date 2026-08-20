@@ -135,7 +135,7 @@ function ReflinkCase() {
           { label: "Role", value: "UX Designer & Researcher (solo)" },
           { label: "Timeline", value: "Mar – Apr 2026" },
           { label: "Tools", value: "Figma" },
-          { label: "Type", value: "UX capstone / personal project" },
+          { label: "Type", value: "Personal project" },
         ]}
         prototype="https://reflinkappbuild.netlify.app/"
       />
